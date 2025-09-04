@@ -8,7 +8,7 @@ setopt noautomenu
 setopt nomenucomplete
 
 # Prompt
-export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$(tput setaf 15)%}%1~ %{$(tput sgr0)%}$ "
+export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$(tput setaf 15)%}%~ %{$(tput sgr0)%}$ "
 
 # History
 export HISTSIZE=10000000
@@ -59,4 +59,3 @@ function cheat() { curl -s cheat.sh/$1 }
 
 # Tmux
 [[ -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As main -n wiki
-
