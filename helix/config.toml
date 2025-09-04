@@ -1,0 +1,17 @@
+theme = "gruvbox"
+
+[editor]
+# line-number = "relative"
+mouse = true
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = true
+
+# [keys.normal.space]
+# f = "@<space>F<C-t>"
+# f = "@<space>B<C-t>"

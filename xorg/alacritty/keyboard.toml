@@ -1,0 +1,13 @@
+[keyboard]
+bindings = [
+  { key = "Insert",   mods = "Shift",         action = "PasteSelection" },
+  { key = "V",        mods = "Control|Shift", action = "Paste" },
+  { key = "C",        mods = "Control|Shift", action = "Copy" },
+  { key = "V",        mods = "Option", action = "Paste" },
+  { key = "C",        mods = "Option", action = "Copy" },
+  { key = "P",        mods = "Option", action = "Paste" },
+  { key = "Y",        mods = "Option", action = "Copy" },
+  { key = "J", mods = "Option", action = "ScrollLineDown" },
+  { key = "K", mods = "Option", action = "ScrollLineUp" },
+  { key = "Space", mods = "Option", action = "ToggleViMode" },
+]

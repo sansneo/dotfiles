@@ -1,0 +1,12 @@
+[user]
+    email = sansneolink@gmail.com
+	name = Alberto Chiaravalli
+	signingkey = ~/.ssh/signing.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true

@@ -1,0 +1,63 @@
+#!/bin/sh
+
+# load sxhkd for keybinds
+pgrep sxhkd || sxhkd -c "$HOME/.config/dk/sxhkdrc" &
+
+logfile="$HOME/.dklog"
+{ # compound command to redirect all output
+
+	# workspace settings
+  dkcmd set numws=4
+
+    # defaulting to the tile layout
+	dkcmd set ws=_ apply layout=tile master=1 stack=3 gap=4 msplit=0.6 ssplit=0.4
+
+    # the last workspace is set to the mono layout
+	dkcmd set ws=3 layout=mono
+
+    # workspaces names
+	dkcmd set \
+		ws=1  name="terminal" \
+		ws=2  name="browser" \
+		ws=3  name="reader" \
+		ws=4  name="extra"
+
+    # static workspaces assigned to monitors
+	mon1=''
+	dkcmd set static_ws=true \
+		ws=1  mon=$mon1 \
+		ws=2  mon=$mon1 \
+		ws=3  mon=$mon1 \
+		ws=4  mon=$mon1
+
+	# minimum width/height for resizing, and minimum allowed on-screen when moving
+	dkcmd set win_minwh=50 win_minxy=10
+    
+	# mantain gaps and borders in single window layouts
+	dkcmd set smart_gap=false smart_border=false
+    
+	# define mouse mod and move/resize buttons
+	dkcmd set mouse mod=super move=button1 resize=button3
+    
+	# obey motif border hints on windows that draw their own
+	dkcmd set obey_motif=true
+
+    # borders
+	dkcmd set border width=0 outer_width=0 \
+		colour \
+		focus='#4ad66d' \
+		unfocus='#ffffff' \
+		urgent='#ee5555' \
+		outer_focus='#4ad66d' \
+		outer_unfocus='#ffffff' \
+		outer_urgent='#222222'
+
+	# window rules
+    dkcmd rule class="^Alacritty$" ws=1 focus=true
+    dkcmd rule class="^Firefox$" ws=2 focus=true
+    dkcmd rule class="^Zathura$" ws=3 focus=true
+
+	# apply current rules
+	dkcmd rule apply '*'
+
+} >> "$logfile" 2>&1
