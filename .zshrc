@@ -21,7 +21,7 @@ export EDITOR="hx"
 export VISUAL="$EDITOR"
 PATH="$PATH:/opt/windows/bin:/opt/windows/system32-bin"
 PATH="$PATH:/mnt/c/Program Files/Microsoft VS Code/bin"
-export PATH="$PATH:$HOME/marksman:$HOME/go/bin:~:$HOME/elixir/elixir-ls"
+export PATH="$PATH:$HOME/marksman:$HOME/go/bin:~:$HOME/elixir/"
 
 # Aliases
 alias ls="ls -lh --group-directories-first --color=always"

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Creating projects directory
-mkdir $USER/git
+mkdir /home/sans/git
 
 # Update repositories first
 echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories
@@ -54,15 +54,15 @@ apk add --no-cache \
 # Installing Docker
 apk add --no-cache docker-engine docker-cli docker-cli-buildx docker-cli-compose docker-zsh-completion docker-openrc
 rc-update add docker default
-useradd $USER docker
+adduser sans docker
 
 # Installing the AWS CLI
 apk add --no-cache aws-cli aws-cli-zsh-completion
 
 # Installing the marksman LSP and markdown oxide
 curl -fLO https://github.com/artempyanykh/marksman/releases/latest/download/marksman-linux-x64
-mkdir "$HOME/marksman"
-mv marksman-linux-x64 "$HOME/marksman/marksman"
+mkdir "/home/sans/marksman"
+mv marksman-linux-x64 "/home/sans/marksman/marksman"
 
 # Installing Go LSP and development packages
 apk add --no-cache go gopls golangci-lint golangci-lint-zsh-completion delve
@@ -78,9 +78,13 @@ curl -s https://api.github.com/repos/elixir-lsp/elixir-ls/releases/latest | \
 grep "browser_download_url.*elixir-ls.*\.zip" | \
 cut -d '"' -f 4 | \
 xargs curl -fLO
-unzip elixir-ls*.zip -d "$HOME/elixir"
-chmod +x "$HOME/elixir/language_server.sh"
-mv "$HOME/elixir/language_server.sh" "$HOME/elixir/elixir-ls"
+unzip elixir-ls*.zip -d "/home/sans/elixir"
+chmod +x "/home/sans/elixir/language_server.sh"
+mv "/home/sans/elixir/language_server.sh" "/home/sans/elixir/elixir-ls"
+rm elixir-ls*.zip
 
 # Removing Helix themes
 rm /usr/share/helix/runtime/themes/*
+
+# Fixing permissions
+chown sans -R /home/sans
