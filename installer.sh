@@ -15,6 +15,7 @@ apk add --no-cache \
   7zip \
   atool \
   build-base \
+  bash \
   busybox-extras \
   busybox-extras-openrc \
   busybox-openrc \

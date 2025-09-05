@@ -41,15 +41,15 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+zinit load ael-code/zsh-colored-man-pages
 zinit load multirious/zsh-helix-mode
 zinit load zdharma-continuum/fast-syntax-highlighting
 zinit load zsh-users/zsh-history-substring-search
-zinit load ael-code/zsh-colored-man-pages
 zhm-add-update-region-highlight-hook
 
 # Bindings
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey -M hxnor 'k' history-substring-search-up
+bindkey -M hxnor 'j' history-substring-search-down
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X" edit-command-line
