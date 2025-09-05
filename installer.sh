@@ -13,7 +13,11 @@ apk upgrade
 # Installing all packages
 apk add --no-cache \
   7zip \
+  atool \
   build-base \
+  busybox-extras \
+  busybox-extras-openrc \
+  busybox-openrc \
   curl \
   ed \
   fd \
@@ -31,7 +35,6 @@ apk add --no-cache \
   ltrace \
   markdown-oxide \
   ncurses \
-  openrc \
   openssl \
   pcre \
   rclone \
