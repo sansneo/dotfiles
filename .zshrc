@@ -58,4 +58,7 @@ bindkey "^X" edit-command-line
 function cheat() { curl -s cheat.sh/$1 }
 
 # Tmux
-[[ -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As main -n wiki
+[[ -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As hxwiki -n main -c ~/wiki
+
+export BROWSER="/mnt/c/Users/Sans/Appdata/Local/Thorium/Application/thorium.exe"
+export PATH="$PATH:/mnt/c/Users/Sans/Appdata/Local/Thorium/Application"
