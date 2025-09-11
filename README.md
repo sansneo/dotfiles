@@ -96,10 +96,13 @@ git clone https://github.com/sansneo/dotfiles
 cd dotfiles
 doas sh installer.sh
 ```
-9. Place the dotfiles where they belong
+9. Place the dotfiles where they belong[^1]
 10. Done! 🎉
 
 > [!NOTE]
 > Setup `mdev` and `hwdrivers` for microcontrollers(and some other things) to work in WSL.  
 > I use Helix for everything, but I do like to have Codium(optimized and private VSCode fork) installed because I used it for a long time!  
 > Get the GitHub Theme, Vim and WSL extensions if you want to try it!
+
+[^1]: To have access to the Windows $PATH in WSL you need to modify the $PATH export in /etc/profile and add the current $PATH to it like this
+      `export PATH="$PATH:/usr..."`
