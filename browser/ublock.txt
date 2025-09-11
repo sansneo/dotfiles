@@ -1,0 +1,10 @@
+! Hide YouTube lives and streamed videos
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer):has(.badge-style-type-live-now-alternate,.yt-spec-avatar-shape--live-ring)
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer,ytd-video-renderer):has([aria-label~="Streamed"])
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer,ytd-video-renderer):not(:has([aria-label~="Streamed"])) :is(#metadata-line>span,.yt-content-metadata-view-model__metadata-row):last-of-type:has-text(Streamed):upward(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer,ytd-video-renderer)
+
+! Hide YouTube Shorts from search results
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
+
+! Hide YouTube 1080p premium quality
+www.youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label)

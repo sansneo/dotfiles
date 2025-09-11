@@ -1,0 +1,68 @@
+{
+	"editor.fontFamily": "CommitMono",
+	"editor.fontLigatures": false,
+	"editor.fontSize": 16,
+	"editor.fontWeight": "bold",
+	"editor.glyphMargin": false,
+	"editor.guides.indentation": true,
+	"editor.lineNumbers": "on",
+	"editor.minimap.enabled": false,
+	"editor.renderLineHighlight": "none",
+	"window.closeWhenEmpty": true,
+	"window.menuBarVisibility": "hidden",
+	"workbench.activityBar.location": "hidden",
+	"workbench.colorTheme": "GitHub Dark Default",
+	"workbench.enableExperiments": false,
+	// explorer
+	"explorer.compactFolders": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmPasteNative": false,
+	// cursor
+	"editor.cursorBlinking": "solid",
+	"editor.cursorStyle": "block",
+	"editor.cursorSurroundingLines": 10,
+	// behaviour
+	"editor.autoClosingBrackets": "never",
+	"editor.folding": false,
+	"editor.formatOnSave": true,
+	"editor.roundedSelection": false,
+	"editor.stickyScroll.enabled": false,
+	"editor.tabSize": 4,
+	"editor.wordWrap": "off",
+	// suggestions
+	"editor.acceptSuggestionOnEnter": "on",
+	"editor.insertSpaces": false,
+	"editor.quickSuggestions": {
+		"comments": false,
+		"other": true,
+		"strings": false
+	},
+	"editor.wordBasedSuggestions": "off",
+	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+	// vim
+	"vim.cursorStylePerMode.insert": "block",
+	"vim.cursorStylePerMode.normal": "block",
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-e>": false,
+		"<C-b>": false,
+		"<C-f>": false,
+		"<C-n>": false
+	},
+	"vim.surround": true,
+	"vim.useCtrlKeys": true,
+	"vim.useSystemClipboard": true,
+	// additional
+	"editor.accessibilitySupport": "off",
+	"extensions.ignoreRecommendations": true,
+	"security.workspace.trust.untrustedFiles": "open",
+	"telemetry.telemetryLevel": "off",
+	"window.title": "${dirty}${rootName}${separator}${activeEditorShort}${separator}${profileName}${separator}${appName}",
+	"workbench.editor.empty.hint": "hidden",
+	"workbench.startupEditor": "none",
+	"files.exclude": {
+		"**/.tmp.driveupload": true,
+		"**/.tmp.drivedownload": true
+	},
+}
