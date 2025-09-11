@@ -38,6 +38,7 @@ You can do everything pretty much anything on a Windows with WSL.
 * hacking: strace, ltrace and rizin
 * vcs: git(LFS support, GitHub's CLI)
 * wiki: marksman and markdown oxide
+* remote: openssh
 * backup: rsync and rclone
 * containers: docker
 * init: openrc
