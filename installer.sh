@@ -34,6 +34,7 @@ apk add --no-cache \
   ltrace \
   markdown-oxide \
   ncurses \
+  openssh-client \
   openssl \
   pcre \
   rclone \
