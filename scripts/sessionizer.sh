@@ -9,15 +9,9 @@ $HOME_DIR/git"
 if [ $# -eq 1 ]; then
     selected="$1"
 else
-    # Use find instead of fd for POSIX compatibility
-    selected=$(echo "$DIRS" | while read -r dir; do
-        if [ -d "$dir" ]; then
-            find "$dir" -type d -maxdepth 1 ! -path "$dir" 2>/dev/null
-        fi
-    done | while read -r path; do
-        # Remove HOME prefix and trailing slashes
-        echo "$path" | sed -e "s|$HOME_DIR/||" -e 's|/*$||'
-    done | sk --margin 10% --color="bw")
+    selected=$(fd --type=dir --max-depth=1 --absolute-path . $DIRS \
+        | sed -e "s|$HOME_DIR/||" -e 's|/$||' \
+        | sk --margin 10% --color="bw")
 fi
 
 [ -z "$selected" ] && exit 0
