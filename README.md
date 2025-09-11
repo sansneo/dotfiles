@@ -5,10 +5,14 @@ This is what I am working on right now and it's great!
 You can do everything pretty much anything on a Windows with WSL.
 
 ## Philosophy
-* My toolset must be a small selection of quality tools, each serving a distinct purpose, so I can master all of them over time.
-* Limiting that building fatigue while working and lowering overhead is a priority and dictates the selection of these tools.
-* Pragmatism, minimalism and modernity(when sensible). I will use what works to get to my goals and I won't adopt something just because it's new and shiny!
-* Keeping things as default as possible to limit time wasted configuring things, but I will update stuff now and then if worth it.
+* My toolset must be a small selection of quality tools, each serving a distinct purpose,  
+  so I can master all of them over time.
+* Limiting that building fatigue while working and lowering overhead is a priority and dictates  
+  the selection of these tools.
+* Pragmatism, minimalism and modernity(when sensible). I will use what works to get to my goals  
+  and I won't adopt something just because it's new and shiny!
+* Keeping things as default as possible to limit time wasted configuring things, but I will  
+  update stuff now and then if worth it.
 * I must be able to use my most important tools over SSH without any issues.
 
 ## My awesome toolset
@@ -44,8 +48,8 @@ You can do everything pretty much anything on a Windows with WSL.
 Get the ISO, make a bootable USB and get it done.  
 
 > [!TIP]
-> Disconnect from the internet, press SHIFT+F10 and write OOBE\BYPASSNRO.
-> Then continue with the installation as usual.
+> Disconnect from the internet, press SHIFT+F10 and write OOBE\BYPASSNRO.  
+> Then continue with the installation as usual.  
 > This skips the required and enforced login to a Microsoft account(also allowing an offline installation).  
 
 2. Run the pretty much necessary [debloater](https://github.com/Raphire/Win11Debloat).
@@ -63,7 +67,8 @@ wsl.exe --import AlpineWSL $env:USERPROFILE\AlpineWSL alpine-minirootfs-x86_64.t
 ```
 
 > [!WARNING]
-> Hey, are you NOT me? Yes? Then make sure to run the following command or make sure to use your username
+> Hey, are you NOT me? Yes?
+> Then make sure to run the following command or make sure to use your username
 > instead of mine both in the installation and the dotfiles!
 ```
 rg 'sans' -r "$USER" --files-with-matches | xargs sed -i "s/sans/$USER/g"
@@ -91,6 +96,6 @@ doas sh installer.sh
 10. Done! 🎉
 
 > [!NOTE]
-> Setup mdev and hwdrivers for microcontrollers(and some other things) to work.  
-> I use Helix for everything, but I do like to have Codium(optimized and private VSCode fork) installed because I used it for a long time!
+> Setup `mdev` and `hwdrivers` for microcontrollers(and some other things) to work in WSL.  
+> I use Helix for everything, but I do like to have Codium(optimized and private VSCode fork) installed because I used it for a long time!  
 > Get the GitHub Theme, Vim and WSL extensions if you want to try it!
