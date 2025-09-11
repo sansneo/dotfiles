@@ -87,7 +87,13 @@ apk add --no-cache aws-cli aws-cli-zsh-completion
 apk add --no-cache ffmpeg yt-dlp
 
 # Removing Helix themes
-rm /usr/share/helix/runtime/themes/*
+rm -rf /usr/share/helix/runtime/themes/*
+
+# Placing the dotfiles
+# rsync -av --exclude='.git' --exclude='.gitattributes' .* /home/sans
+# mkdir /home/sans/.ssh 2>/dev/null && mv ssh/config /home/sans/.ssh
+# mv -f gopls helix scripts /home/sans/.config
+# mv -f wsl/wsl.conf /etc
 
 # Fixing permissions
 chown sans -R /home/sans

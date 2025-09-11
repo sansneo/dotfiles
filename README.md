@@ -52,8 +52,8 @@ Get the ISO, make a bootable USB and get it done.
 > Then continue with the installation as usual.  
 > This skips the required and enforced login to a Microsoft account(also allowing an offline installation).  
 
-2. Run the pretty much necessary [debloater](https://github.com/Raphire/Win11Debloat).
-3. Install Thorium with the Bitwarden, YouTube Unhook and CouponBirds extensions!
+2. Run the [debloater](https://github.com/Raphire/Win11Debloat) and replace the Windows Terminal `settings.json`.
+3. Install Thorium with the Bitwarden, YouTube Unhook and CouponBirds extensions and import the bookmarks!
 4. Enabling the WSL and Virtual Machine Platform features and reboot.
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -87,9 +87,12 @@ echo 'permit :wheel' > /etc/doas.d/doas.conf
 adduser sans wheel
 chmod u+s /bin/su
 ```
-8. Run the installation script
+8. Clone the repository, install `git` and run the installation script
 ```
 su -l sans
+doas apk add git
+git clone https://github.com/sansneo/dotfiles
+cd dotfiles
 doas sh installer.sh
 ```
 9. Place the dotfiles where they belong

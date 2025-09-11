@@ -2,6 +2,7 @@ theme = "gruvbox"
 
 [editor]
 mouse = false
+true-color = true
 
 [editor.cursor-shape]
 insert = "block"
