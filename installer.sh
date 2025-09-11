@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Are you root?
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Run as root!"
+    exit 1
+fi
+
 # Creating projects directory
 mkdir /home/sans/git
 
@@ -64,11 +70,11 @@ mv marksman-linux-x64 "/home/sans/marksman/marksman"
 
 # Installing Go LSP and development packages
 apk add --no-cache go gopls golangci-lint golangci-lint-zsh-completion delve
-go install github.com/pressly/goose/v3/cmd/goose@latest
+doas -u sans go install github.com/pressly/goose/v3/cmd/goose@latest
 
 # Installing NodeJS LSP and development packages
 apk add --no-cache nodejs npm
-npm install -g typescript-language-server typescript
+doas -u sans npm install -g typescript-language-server typescript
 
 # Installing Elixir LSP and packages
 apk add --no-cache elixir
@@ -89,12 +95,6 @@ apk add --no-cache ffmpeg yt-dlp
 
 # Removing Helix themes
 rm -rf /usr/share/helix/runtime/themes/*
-
-# Placing the dotfiles
-# rsync -av --exclude='.git' --exclude='.gitattributes' .* /home/sans
-# mkdir /home/sans/.ssh 2>/dev/null && mv ssh/config /home/sans/.ssh
-# mv -f gopls helix scripts /home/sans/.config
-# mv -f wsl/wsl.conf /etc
 
 # Fixing permissions
 chown sans -R /home/sans
