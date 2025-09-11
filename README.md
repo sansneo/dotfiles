@@ -67,9 +67,9 @@ wsl.exe --import AlpineWSL $env:USERPROFILE\AlpineWSL alpine-minirootfs-x86_64.t
 ```
 
 > [!WARNING]
-> Hey, are you NOT me? Yes?
-> Then make sure to run the following command or make sure to use your username
-> instead of mine both in the installation and the dotfiles!
+> Hey, are you NOT me? Yes?  
+> Then make sure to run the following command and to modify my `.zshrc`  
+> or make sure to use your username instead of mine both in the installation and the dotfiles!  
 ```
 rg 'sans' -r "$USER" --files-with-matches | xargs sed -i "s/sans/$USER/g"
 ```
