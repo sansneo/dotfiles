@@ -1,0 +1,4 @@
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "markdown-oxide"]
+auto-format = true 

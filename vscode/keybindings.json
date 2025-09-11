@@ -1,0 +1,22 @@
+[
+	{
+		"key": "ctrl+e",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+s",
+		"command": "workbench.action.terminal.toggleTerminal"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.terminal.toggleTerminal"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "-markdown.showPreview"
+	}
+]

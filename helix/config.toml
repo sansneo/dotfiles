@@ -1,0 +1,18 @@
+theme = "gruvbox"
+
+[editor]
+mouse = false
+
+[editor.cursor-shape]
+insert = "block"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal.space]
+w = { x = "wclose" }
+
+[keys.normal.C-w]
+x = "wclose"
