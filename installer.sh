@@ -74,7 +74,7 @@ doas -u sans go install github.com/pressly/goose/v3/cmd/goose@latest
 
 # Installing NodeJS LSP and development packages
 apk add --no-cache nodejs npm
-doas -u sans npm install -g typescript-language-server typescript
+npm install -g typescript-language-server typescript
 
 # Installing Elixir LSP and packages
 apk add --no-cache elixir

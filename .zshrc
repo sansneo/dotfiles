@@ -3,18 +3,14 @@ autoload -U colors && colors
 stty stop undef
 export COLORTERM="truecolor"
 
-# Completion
+# Options
 setopt noautomenu
 setopt nomenucomplete
+setopt inc_append_history
+setopt interactive_comments
 
 # Prompt
 export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$(tput setaf 15)%}%~ %{$(tput sgr0)%}$ "
-
-# History
-export HISTSIZE=1000000
-export HISTFILE="$HOME/.zhistory"
-setopt inc_append_history
-setopt interactive_comments
 
 # Environment
 export EDITOR="hx" VISUAL="$EDITOR"
