@@ -69,7 +69,9 @@ mkdir "/home/sans/marksman"
 mv marksman-linux-x64 "/home/sans/marksman/marksman"
 
 # Installing Go LSP and development packages
-apk add --no-cache go gopls golangci-lint golangci-lint-zsh-completion delve
+apk add --no-cache go golangci-lint golangci-lint-zsh-completion delve
+doas -u sans go install golang.org/x/tools/gopls@latest
+doas -u sans go install golang.org/x/tools/cmd/goimports@latest
 doas -u sans go install github.com/pressly/goose/v3/cmd/goose@latest
 
 # Installing NodeJS LSP and development packages

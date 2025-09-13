@@ -2,3 +2,10 @@
 name = "markdown"
 language-servers = ["marksman", "markdown-oxide"]
 auto-format = true 
+
+[[language]]
+name = "go"
+roots = ["go.mod"]
+auto-format = true
+language-servers = ["gopls"]
+formatter = { command = "goimports" }
