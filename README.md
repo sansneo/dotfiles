@@ -40,7 +40,8 @@ You can do everything pretty much anything on a Windows with WSL.
 * wiki: marksman and markdown oxide
 * remote: openssh
 * backup: rsync and rclone
-* containers: docker
+* containers: docker and kubernetes
+* infrastructure: aws, azure, tencent, terraform and polumi
 * init: openrc
 * libc: musl
 
