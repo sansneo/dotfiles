@@ -29,7 +29,7 @@ You can do everything pretty much anything on Windows with WSL.
 * langs: each takes 6 months to 2 years minimum to truly understand
   * ash(shell scripting)
   * awk(pattern scanning and processing)
-  * asm/c(systems programming, gnu toolchain including gdb and make)
+  * asm/c(systems programming, gnu toolchain with gdb and make)
   * go(cloud work)
   * node(webdev)
   * elixir(functional)
