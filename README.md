@@ -1,8 +1,8 @@
 # dotfiles
-> I use the Alpine Linux extended edition on metal or the minimal rootfs in Windows WSL
+> I use the Alpine Linux extended edition on bare metal or the minimal rootfs in Windows WSL
 
 This is what I am working on right now and it's great!  
-You can do everything pretty much anything on a Windows with WSL.
+You can do everything pretty much anything on Windows with WSL.
 
 ## Philosophy
 * My toolset must be a small selection of quality tools, each serving a distinct purpose,  
@@ -16,29 +16,29 @@ You can do everything pretty much anything on a Windows with WSL.
 * I must be able to use my most important tools over SSH without any issues.
 
 ## My awesome toolset
-* linux: kernel
-* apk: package manager
-* busybox: userland
-* atool: (un)archiver
-* curl: HTTP client
+* kernel: linux
+* package manager: apk
+* userland: busybox
+* archiver: atool
+* transfer: curl
 * hashing/encryption: openssl
 * editors: ed, vi and helix
 * multiplexer: tmux
-* modernity: fd, rg, skim and jq
+* modernity: fd, rg, sk and jq
 * shell: zsh(with completions)
 * langs: each takes 6 months to 2 years minimum to truly understand
   * ash(shell scripting)
   * awk(pattern scanning and processing)
-  * asm/c(systems programming, GNU toolchain including GDB)
+  * asm/c(systems programming, gnu toolchain including gdb and make)
   * go(cloud work)
   * node(webdev)
   * elixir(functional)
   * sqlite(local database)
   * typst(typesettings)
 * hacking: strace, ltrace and rizin
-* vcs: git(LFS support, GitHub's CLI)
+* vcs: git(with github-cli)
 * wiki: marksman and markdown oxide
-* remote: openssh
+* remote: openssh and wormhole
 * backup: rsync and rclone
 * containers: docker and kubernetes
 * infrastructure: aws, azure, tencent, terraform and polumi
@@ -54,9 +54,9 @@ Get the ISO, make a bootable USB and get it done.
 > Then continue with the installation as usual.  
 > This skips the required and enforced login to a Microsoft account(also allowing an offline installation).  
 
-2. Run the [debloater](https://github.com/Raphire/Win11Debloat) and replace the Windows Terminal `settings.json`.
-3. Install Thorium with the Bitwarden, YouTube Unhook and CouponBirds extensions and import the bookmarks!
-4. Enabling the WSL and Virtual Machine Platform features and reboot.
+2. Run the [debloater](https://github.com/Raphire/Win11Debloat) and use my Windows Terminal `settings.json`.
+3. Install Thorium with the Bitwarden, YouTube Unhook and CouponBirds extensions then import the bookmarks!
+4. Enable the WSL and Virtual Machine Platform features and reboot.
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -71,7 +71,7 @@ wsl.exe --import AlpineWSL $env:USERPROFILE\AlpineWSL alpine-minirootfs-x86_64.t
 > [!WARNING]
 > Hey, are you NOT me? Yes?  
 > Then make sure to run the following command and to modify my `.zshrc`  
-> or make sure to use your username instead of mine both in the installation and the dotfiles!  
+> or simply make sure to use your username instead of mine in both the installation and the dotfiles!  
 ```
 rg 'sans' -r "$USER" --files-with-matches | xargs sed -i "s/sans/$USER/g"
 ```
@@ -102,8 +102,8 @@ doas sh installer.sh
 
 > [!NOTE]
 > Setup `mdev` and `hwdrivers` for microcontrollers(and some other things) to work in WSL.  
-> I use Helix for everything, but I do like to have Codium(optimized and private VSCode fork) installed because I used it for a long time!  
+> I use Helix for everything, but I do like to have Codium(optimized and private VSCode fork) installed because I used it for such a long time!  
 > Get the GitHub Theme, Vim and WSL extensions if you want to try it!
 
-[^1]: To have access to the Windows $PATH in WSL you need to modify the $PATH export in /etc/profile and add the current $PATH to it like this
+[^1]: To have access to the Windows $PATH in WSL you need to modify the $PATH export in /etc/profile by adding the current $PATH value to it like this  
       `export PATH="$PATH:/usr..."`
