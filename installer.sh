@@ -60,8 +60,19 @@ apk add --no-cache \
   zsh \
   zsh-completions
   
+# Services
+rc-update add localmount boot
+rc-update add bootmisc boot
+rc-update add hwdrivers boot
+rc-update add modules boot
+rc-update add sysctl boot
+rc-update add syslog default
+rc-update add networking default
+rc-update add crond default
+
 # Installing Docker
 apk add --no-cache docker-engine docker-cli docker-cli-buildx docker-cli-compose docker-zsh-completion docker-openrc
+rc-update add containerd default
 rc-update add docker default
 adduser sans docker
 
