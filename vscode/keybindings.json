@@ -1,22 +1,59 @@
 [
 	{
+		"key": "ctrl+shift+v",
+		"command": "-markdown.showPreview"
+	},
+	// Terminal
+	{
+		"key": "ctrl+shift+j",
+		"command": "workbench.action.togglePanel"
+	},
+	{
+		"key": "ctrl+shift+k",
+		"command": "workbench.action.terminal.kill",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+c",
+		"command": "workbench.action.terminal.new"
+	},
+	{
+		"key": "ctrl+shift+a",
+		"command": "workbench.action.terminal.focusNext",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+shift+b",
+		"command": "workbench.action.terminal.focusPrevious",
+		"when": "terminalFocus"
+	},
+	// Explorer
+	{
 		"key": "ctrl+e",
 		"command": "workbench.view.explorer"
 	},
 	{
-		"key": "ctrl+shift+e",
+		"key": "ctrl+q",
 		"command": "workbench.action.quickOpen"
 	},
 	{
-		"key": "ctrl+s",
-		"command": "workbench.action.terminal.toggleTerminal"
+		"key": "n",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && !inputFocus"
 	},
 	{
-		"key": "ctrl+shift+s",
-		"command": "workbench.action.terminal.toggleTerminal"
+		"command": "renameFile",
+		"key": "r",
+		"when": "filesExplorerFocus && !inputFocus"
 	},
 	{
-		"key": "ctrl+shift+v",
-		"command": "-markdown.showPreview"
-	}
+		"key": "shift+n",
+		"command": "explorer.newFolder",
+		"when": "explorerViewletFocus"
+	},
+	{
+		"command": "deleteFile",
+		"key": "d",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
 ]

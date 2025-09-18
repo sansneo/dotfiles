@@ -97,8 +97,11 @@ git clone https://github.com/sansneo/dotfiles
 cd dotfiles
 doas sh installer.sh
 ```
-9. Place the dotfiles where they belong[^1]
-10. Done! 🎉
+9. Restart WSL
+```
+wsl.exe --terminate AlpineWSL
+```
+10. Place the dotfiles where they belong[^1] and done! 🎉
 
 > [!NOTE]
 > Setup `mdev` and `hwdrivers` for microcontrollers(and some other things) to work in WSL.  
