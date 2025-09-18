@@ -24,6 +24,7 @@ apk add --no-cache \
   busybox-extras \
   busybox-extras-openrc \
   busybox-openrc \
+  busybox-suid \
   curl \
   ed \
   fd \
@@ -54,6 +55,7 @@ apk add --no-cache \
   tmux-zsh-completion \
   typst \
   typst-zsh-completion \
+  wormhole-william \
   xclip \
   zsh \
   zsh-completions
@@ -69,7 +71,7 @@ mkdir "/home/sans/marksman"
 mv marksman-linux-x64 "/home/sans/marksman/marksman"
 
 # Installing Go LSP and development packages
-apk add --no-cache go golangci-lint golangci-lint-zsh-completion delve
+apk add --no-cache go delve golangci-lint golangci-lint-zsh-completion
 doas -u sans go install golang.org/x/tools/gopls@latest
 doas -u sans go install golang.org/x/tools/cmd/goimports@latest
 doas -u sans go install github.com/pressly/goose/v3/cmd/goose@latest
@@ -89,13 +91,7 @@ chmod +x "/home/sans/elixir/language_server.sh"
 mv "/home/sans/elixir/language_server.sh" "/home/sans/elixir/elixir-ls"
 rm elixir-ls*.zip
 
-# Installing the AWS CLI
-apk add --no-cache aws-cli aws-cli-zsh-completion
-
-# Installing ffmpeg and yt-dlp
-apk add --no-cache ffmpeg yt-dlp
-
-# Removing Helix themes
+# Removing default Helix themes
 rm -rf /usr/share/helix/runtime/themes/*
 
 # Fixing permissions

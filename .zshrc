@@ -6,11 +6,23 @@ export COLORTERM="truecolor"
 # Options
 setopt noautomenu
 setopt nomenucomplete
-setopt inc_append_history
 setopt interactive_comments
+setopt appendhistory
+setopt inc_append_history
+setopt share_history
+setopt hist_ignore_dups
+setopt hist_ignore_space
 
 # Prompt
 export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$(tput setaf 15)%}%~ %{$(tput sgr0)%}$ "
+
+# Environment
+export HISTFILE=~/.history HISTSIZE=1000 SAVEHIST=1000
+export EDITOR="hx" VISUAL="$EDITOR"
+export BROWSER="thorium.exe"
+PATH="$PATH:/mnt/c/Users/Sans/AppData/Local/Thorium/Application"
+PATH="$PATH:/mnt/c/Program Files/Microsoft VS Code/bin"
+export PATH="$PATH:$HOME/marksman:$HOME/go/bin:~:$HOME/elixir/"
 
 # Environment
 export EDITOR="hx" VISUAL="$EDITOR"
@@ -28,6 +40,7 @@ alias objdump="objdump -M intel"
 alias fd="fd --hidden" rg="rg --hidden"
 alias sk="sk --margin 10% --color='bw'"
 alias q="docker run --rm -it -v /etc/resolv.conf:/etc/resolv.conf ghcr.io/natesales/q"
+alias aws-cli="docker run --rm -it -v /home/$USER/.aws:/root/.aws -v $PWD:/data amazon/aws-cli"
 alias azure-cli="docker run --rm -it -v /home/$USER/.azure:/root/.azure -v $PWD:/data mcr.microsoft.com/azure-cli"
 alias tencent-cli="docker run --rm -it -v /home/$USER/.tencent:/root/.tencent -v $PWD:/data tencentcloud/tencentcloud-cli"
 alias thorium="thorium.exe"
@@ -41,7 +54,7 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 zinit load ael-code/zsh-colored-man-pages
 zinit load multirious/zsh-helix-mode
-zinit load zdharma-continuum/fast-syntax-highlighting
+zinit load zsh-users/zsh-syntax-highlighting
 zinit load zsh-users/zsh-history-substring-search
 zhm-add-update-region-highlight-hook
 
