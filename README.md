@@ -97,9 +97,12 @@ git clone https://github.com/sansneo/dotfiles
 cd dotfiles
 doas sh installer.sh
 ```
-9. Restart WSL
+9. Restart WSL and set the timezone
 ```
 wsl.exe --terminate AlpineWSL
+wsl.exe -d AlpineWSL
+doas apk add tzdata
+doas ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime
 ```
 10. Place the dotfiles where they belong[^1] and done! 🎉
 
