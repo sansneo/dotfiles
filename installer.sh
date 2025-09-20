@@ -63,8 +63,6 @@ apk add --no-cache \
 # Services
 rc-update add localmount boot
 rc-update add bootmisc boot
-rc-update add hwdrivers boot
-rc-update add modules boot
 rc-update add sysctl boot
 rc-update add syslog default
 rc-update add networking default

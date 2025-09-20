@@ -1,11 +1,25 @@
 # Windows
-* 7zip
+* Windows Terminal
+* Visual Studio Code
 * Cheat Engine
+* Cutter
+* 7zip
 * Capcut
-* Figma
-* Google Drive
+* Drive
 * OBS Studio
 * Qbittorrent
-* VLC Media Player
 * Thorium
-* Super Smash Flash 2
+* VLC Media Player
+* WhatsApp
+* Slippi
+
+# Android
+* Authenticator
+* Bitwarden
+* Fennec
+* Maps
+* Hinge
+* Metrolist
+* Strong
+* Tinder
+* WhatsApp
