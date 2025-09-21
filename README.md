@@ -84,8 +84,8 @@ su -l root
 ```
 7. Install `doas` and set the `su` SUID bit
 ```
-apk add doas
-echo 'permit :wheel' > /etc/doas.d/doas.conf
+apk add doas doas-sudo-shim
+echo 'permit persist :wheel as root' > /etc/doas.conf
 adduser sans wheel
 chmod u+s /bin/su
 ```
