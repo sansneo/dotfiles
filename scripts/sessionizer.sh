@@ -3,7 +3,9 @@
 # Lookup
 HOME_DIR="${HOME:-}"
 DIRS="$HOME_DIR
-$HOME_DIR/git"
+$HOME_DIR/git
+$HOME_DIR/git/forks
+$HOME_DIR/notes"
 
 # This uses skim, but any other fuzzy finder will do
 if [ $# -eq 1 ]; then
