@@ -53,8 +53,6 @@ apk add --no-cache \
   strace \
   tmux \
   tmux-zsh-completion \
-  typst \
-  typst-zsh-completion \
   wormhole-william \
   xclip \
   zsh \
@@ -74,22 +72,22 @@ rc-update add containerd default
 rc-update add docker default
 adduser sans docker
 
-# Installing the marksman LSP and markdown oxide
+# Installing Marksman LSP and Markdown Oxide
 curl -fLO https://github.com/artempyanykh/marksman/releases/latest/download/marksman-linux-x64
 mkdir "/home/sans/marksman"
 mv marksman-linux-x64 "/home/sans/marksman/marksman"
 
-# Installing Go LSP and development packages
+# Installing Go and development packages
 apk add --no-cache go delve golangci-lint golangci-lint-zsh-completion
 doas -u sans go install golang.org/x/tools/gopls@latest
 doas -u sans go install golang.org/x/tools/cmd/goimports@latest
 doas -u sans go install github.com/pressly/goose/v3/cmd/goose@latest
 
-# Installing NodeJS LSP and development packages
+# Installing NodeJS and development packages
 apk add --no-cache nodejs npm
 npm install -g typescript-language-server typescript
 
-# Installing Elixir LSP and packages
+# Installing Elixir and development packages
 apk add --no-cache elixir
 curl -s https://api.github.com/repos/elixir-lsp/elixir-ls/releases/latest | \
 grep "browser_download_url.*elixir-ls.*\.zip" | \
@@ -99,6 +97,12 @@ unzip elixir-ls*.zip -d "/home/sans/elixir"
 chmod +x "/home/sans/elixir/language_server.sh"
 mv "/home/sans/elixir/language_server.sh" "/home/sans/elixir/elixir-ls"
 rm elixir-ls*.zip
+
+# Installing AWK development packages
+npm install -g awk-language-server
+
+# Installing Typst and development packages
+apk add --no-cache typst typst-zsh-completion tinymist
 
 # Removing default Helix themes
 rm -rf /usr/share/helix/runtime/themes/*
