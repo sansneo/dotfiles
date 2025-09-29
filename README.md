@@ -55,11 +55,10 @@ Get the ISO, make a bootable USB and get it done.
 > This skips the required and enforced login to a Microsoft account(also allowing an offline installation).  
 
 2. Run the [debloater](https://github.com/Raphire/Win11Debloat) and use my Windows Terminal `settings.json`.
-3. Install Thorium with the Bitwarden, YouTube Unhook and CouponBirds extensions then import the bookmarks!
+3. Install Firefox with the Bitwarden, uBlock Origin, YouTube Unhook, CouponBirds and Watch2Gether extensions then import the bookmarks!
 
 > [!TIP]
-> Remember to automatically hide the Windows taskbar.
-> As I basically use Windows Terminal and Thorium 99% of the time it's super comfy!
+> As I basically use Windows Terminal and Firefox 99% of the time it's super comfy to automatically hide the Windows Taskbar!
 
 4. Enable the WSL and Virtual Machine Platform features and reboot.
 ```
