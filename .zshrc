@@ -22,7 +22,7 @@ export EDITOR="hx" VISUAL="$EDITOR"
 export BROWSER="thorium.exe"
 PATH="$PATH:/mnt/c/Users/Sans/AppData/Local/Thorium/Application"
 PATH="$PATH:/mnt/c/Program Files/Microsoft VS Code/bin"
-export PATH="$PATH:$HOME/marksman:$HOME/go/bin:~:$HOME/elixir/"
+export PATH="$PATH:$HOME/go/bin:$HOME/lsp"
 
 # Environment
 export EDITOR="hx" VISUAL="$EDITOR"
