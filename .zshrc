@@ -19,17 +19,10 @@ export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$
 # Environment
 export HISTFILE=~/.history HISTSIZE=1000 SAVEHIST=1000
 export EDITOR="hx" VISUAL="$EDITOR"
-export BROWSER="thorium.exe"
-PATH="$PATH:/mnt/c/Users/Sans/AppData/Local/Thorium/Application"
+export BROWSER="firefox.exe"
+PATH="$PATH:/mnt/c/Program Files/Firefox Developer Edition"
 PATH="$PATH:/mnt/c/Program Files/Microsoft VS Code/bin"
 export PATH="$PATH:$HOME/go/bin:$HOME/lsp"
-
-# Environment
-export EDITOR="hx" VISUAL="$EDITOR"
-export BROWSER="thorium.exe"
-PATH="$PATH:/mnt/c/Users/Sans/AppData/Local/Thorium/Application"
-PATH="$PATH:/mnt/c/Program Files/Microsoft VS Code/bin"
-export PATH="$PATH:$HOME/marksman:$HOME/go/bin:~:$HOME/elixir/"
 
 # Aliases
 alias ls="ls -lh --group-directories-first --color=always"
@@ -40,10 +33,12 @@ alias objdump="objdump -M intel"
 alias fd="fd --hidden" rg="rg --hidden"
 alias sk="sk --margin 10% --color='bw'"
 alias q="docker run --rm -it -v /etc/resolv.conf:/etc/resolv.conf ghcr.io/natesales/q"
+alias kubectl="docker run --rm -it -v /home/$USER/.kube:/root/.kube bitnami/kubectl"
 alias aws-cli="docker run --rm -it -v /home/$USER/.aws:/root/.aws -v $PWD:/data amazon/aws-cli"
 alias azure-cli="docker run --rm -it -v /home/$USER/.azure:/root/.azure -v $PWD:/data mcr.microsoft.com/azure-cli"
 alias tencent-cli="docker run --rm -it -v /home/$USER/.tencent:/root/.tencent -v $PWD:/data tencentcloud/tencentcloud-cli"
-alias thorium="thorium.exe"
+alias terraform="docker run --rm -it -v /home/$USER/.terraform.d:/root/.terraform.d -v $PWD:/data hashicorp/terraform:light"
+alias firefox="firefox.exe"
 
 # Plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
