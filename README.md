@@ -38,7 +38,7 @@ You can do everything pretty much anything on Windows with WSL.
 * hacking: strace, ltrace and rizin
 * vcs: git(with github-cli)
 * wiki: marksman and markdown oxide
-* remote: openssh and wormhole
+* remote: openssh and croc
 * backup: rsync and rclone
 * containers: docker and kubernetes
 * infrastructure: aws, azure, tencent, terraform and polumi
@@ -56,6 +56,11 @@ Get the ISO, make a bootable USB and get it done.
 
 2. Run the [debloater](https://github.com/Raphire/Win11Debloat) and use my Windows Terminal `settings.json`.
 3. Install Thorium with the Bitwarden, YouTube Unhook and CouponBirds extensions then import the bookmarks!
+
+> [!TIP]
+> Remember to automatically hide the Windows taskbar.
+> As I basically use Windows Terminal and Thorium 99% of the time it's super comfy!
+
 4. Enable the WSL and Virtual Machine Platform features and reboot.
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -66,14 +71,6 @@ shutdown.exe /r /t 0
 ```
 New-Item -Type Directory $env:USERPROFILE\AlpineWSL
 wsl.exe --import AlpineWSL $env:USERPROFILE\AlpineWSL alpine-minirootfs-x86_64.tar
-```
-
-> [!WARNING]
-> Hey, are you NOT me? Yes?  
-> Then make sure to run the following command and to modify my `.zshrc`  
-> or simply make sure to use your username instead of mine in both the installation and the dotfiles!  
-```
-rg 'sans' -r "$USER" --files-with-matches | xargs sed -i "s/sans/$USER/g"
 ```
 
 6. Add a standard user and install `zsh`
@@ -108,8 +105,19 @@ doas ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime
 
 > [!NOTE]
 > Setup `mdev` and `hwdrivers` for microcontrollers(and some other things) to work in WSL.  
-> I use Helix for everything, but I do like to have Codium(optimized and private VSCode fork) installed because I used it for such a long time!  
-> Get the GitHub Theme, Vim and WSL extensions if you want to try it!
+> I use Helix for everything, but I do like to have VSCode installed because I used it for such a long time!  
+> Get the GitHub Theme, Vim and WSL extensions if you want to try my config!
 
 [^1]: To have access to the Windows $PATH in WSL you need to modify the $PATH export in /etc/profile by adding the current $PATH value to it like this  
       `export PATH="$PATH:/usr..."`
+
+> [!WARNING]
+> This is made for myself obviously!
+> If for whatever reason you want to copy me make sure to run the following command and to modify my `.zshrc` or simply make sure to use your username
+> instead of mine in both the installation and the dotfiles!  
+```sh
+rg 'sans' -r "$USER" --files-with-matches | xargs sed -i "s/sans/$USER/g"
+```
+
+Remember to sync and backup!  
+Always clone disks instead of reinstalling if you can.

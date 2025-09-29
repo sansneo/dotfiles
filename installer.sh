@@ -6,8 +6,8 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
-# Creating projects directory
-mkdir /home/sans/git
+# Creating directories
+mkdir -pv /home/sans/git/forks /home/sans/lsp
 
 # Update repositories first
 echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories
@@ -53,7 +53,7 @@ apk add --no-cache \
   strace \
   tmux \
   tmux-zsh-completion \
-  wormhole-william \
+  croc \
   xclip \
   zsh \
   zsh-completions
@@ -74,8 +74,7 @@ adduser sans docker
 
 # Installing Marksman LSP and Markdown Oxide
 curl -fLO https://github.com/artempyanykh/marksman/releases/latest/download/marksman-linux-x64
-mkdir "/home/sans/marksman"
-mv marksman-linux-x64 "/home/sans/marksman/marksman"
+mv marksman-linux-x64 "/home/sans/lsp/marksman"
 
 # Installing Go and development packages
 apk add --no-cache go delve golangci-lint golangci-lint-zsh-completion
@@ -93,9 +92,9 @@ curl -s https://api.github.com/repos/elixir-lsp/elixir-ls/releases/latest | \
 grep "browser_download_url.*elixir-ls.*\.zip" | \
 cut -d '"' -f 4 | \
 xargs curl -fLO
-unzip elixir-ls*.zip -d "/home/sans/elixir"
-chmod +x "/home/sans/elixir/language_server.sh"
-mv "/home/sans/elixir/language_server.sh" "/home/sans/elixir/elixir-ls"
+unzip elixir-ls*.zip -d "/home/sans/lsp"
+chmod +x "/home/sans/lsp/language_server.sh"
+mv "/home/sans/lsp/language_server.sh" "/home/sans/lsp/elixir-ls"
 rm elixir-ls*.zip
 
 # Installing AWK development packages
