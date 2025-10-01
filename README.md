@@ -108,7 +108,7 @@ doas ln -s /usr/share/zoneinfo/Europe/Rome /etc/localtime
 > Get the GitHub Theme, Vim and WSL extensions if you want to try my config!
 
 [^1]: To have access to the Windows $PATH in WSL you need to modify the $PATH export in /etc/profile by adding the current $PATH value to it like this  
-      `export PATH="$PATH:/usr..."`
+      `export PATH="$PATH:/usr..."` and set `appendWindowsPath` to true in your wsl.conf!
 
 > [!WARNING]
 > This is made for myself obviously!
