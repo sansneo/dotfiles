@@ -20,7 +20,7 @@
 "comment" = { fg = "overlay2", modifiers = ["italic"] }
 
 "variable" = "text"
-"variable.parameter" = { fg = "maroon", modifiers = ["italic"] }
+"variable.parameter" = { fg = "maroon" }
 "variable.builtin" = "red"
 "variable.other.member" = "blue"
 
@@ -30,7 +30,7 @@
 "punctuation.special" = "sky"
 
 "keyword" = "mauve"
-"keyword.control.conditional" = { fg = "mauve", modifiers = ["italic"] }
+"keyword.control.conditional" = { fg = "mauve" }
 
 "operator" = "sky"
 
@@ -39,7 +39,7 @@
 
 "tag" = "blue"
 
-"namespace" = { fg = "yellow", modifiers = ["italic"] }
+"namespace" = { fg = "yellow" }
 
 "special" = "blue" # fuzzy highlight
 
@@ -66,7 +66,7 @@
 
 # User Interface
 # --------------
-"ui.background" = { fg = "text" }
+"ui.background" = { fg = "text", bg = "" }
 
 "ui.linenr" = { fg = "surface1" }
 "ui.linenr.selected" = { fg = "lavender" }

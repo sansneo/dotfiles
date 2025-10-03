@@ -10,7 +10,7 @@
 
 "type" = "yellow"
 "constant" = "fg"
-"constant.builtin" = { fg = "purple", modifiers = ["italic"] }
+"constant.builtin" = { fg = "purple" }
 "constant.builtin.boolean" = "purple"
 "constant.numeric" = "purple"
 "constant.character.escape" = "green"
@@ -19,7 +19,7 @@
 "string.special" = "yellow"
 "comment" = { fg = "grey1", modifiers = ["italic"] }
 "variable" = "fg"
-"variable.builtin" = { fg = "purple", modifiers = ["italic"] }
+"variable.builtin" = { fg = "purple" }
 "variable.parameter" = "fg"
 "variable.other.member" = "blue"
 "label" = "orange"
@@ -35,8 +35,8 @@
 "function" = "green"
 "function.macro" = "green"
 "tag" = "orange"
-"namespace" = { fg = "yellow", modifiers = ["italic"] }
-"attribute" = { fg = "purple", modifiers = ["italic"] }
+"namespace" = { fg = "yellow" }
+"attribute" = { fg = "purple" }
 "constructor" = "green"
 "module" = "yellow"
 "special" = "blue"
@@ -64,7 +64,7 @@
 "diff.delta" = "blue"
 "diff.minus" = "red"
 
-"ui.background" = {}
+"ui.background" = { bg = "" }
 "ui.background.separator" = "grey0"
 "ui.cursor" = { fg = "bg1", bg = "grey2" }
 "ui.cursor.insert" = { fg = "bg0", bg = "grey1" }

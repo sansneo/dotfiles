@@ -2,7 +2,7 @@
 
 "annotation" = { fg = "fg1" }
 
-"attribute" = { fg = "aqua1", modifiers = ["italic"] }
+"attribute" = { fg = "aqua1" }
 
 "comment" = { fg = "gray", modifiers = ["italic"] }
 
@@ -69,9 +69,9 @@
 "tag" = { fg = "aqua1" }
 
 "type" = { fg = "yellow1" }
-"type.enum.variant" = { modifiers = ["italic"] }
+"type.enum.variant" = { }
 
-"ui.background" = {}
+"ui.background" = { bg = "" }
 "ui.bufferline" = { fg = "fg1", bg = "bg1" }
 "ui.bufferline.active" = { fg = "bg0", bg = "yellow0" }
 "ui.bufferline.background" = { bg = "bg2" }
@@ -117,9 +117,9 @@
 "ui.window" = { bg = "bg1" }
 
 "variable" = { fg = "fg1" }
-"variable.builtin" = { fg = "orange1", modifiers = ["italic"] }
+"variable.builtin" = { fg = "orange1" }
 "variable.other.member" = { fg = "blue1" }
-"variable.parameter" = { fg = "blue1", modifiers = ["italic", "bold"] }
+"variable.parameter" = { fg = "blue1", modifiers = ["bold"] }
 
 [palette]
 bg0     = "#1e1e2e"   # main workspace background
