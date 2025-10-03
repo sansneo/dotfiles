@@ -4,7 +4,7 @@
 # License: MIT
 
 "attribute" = "green"
-"comment" = { fg = "grey1", modifiers = ["italic"] }
+"comment" = { fg = "grey1" }
 "constant" = "fg0"
 "constant.builtin" = "purple"
 "constant.character.escape" = "green"

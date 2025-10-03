@@ -34,7 +34,7 @@
 "ui.virtual.inlay-hint" = { fg = "base6" }
 
 # comments, nord3 based lighter color
-"comment" = { fg = "base5", modifiers = ["italic"] }
+"comment" = { fg = "base5" }
 "ui.linenr" = { fg = "base5" }
 
 # cursor, variables, constants, attributes, fields

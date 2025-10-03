@@ -40,7 +40,7 @@
 "variable.builtin".fg      = "olive"
 "variable".fg              = "cyan"
 "variable.other.member".fg = "lilac"
-"variable.parameter"       = { fg = "blue", modifiers = ["italic"] }
+"variable.parameter"       = { fg = "blue" }
 
 "constructor".fg = "sand"
 "label".fg       = "magenta"
@@ -95,7 +95,7 @@
 "markup.link.text"     = "magenta"
 "markup.link.url"      = "cyan"
 "markup.list"          = "cyan"
-"markup.quote"         = { fg = "yellow", modifiers = ["italic"] }
+"markup.quote"         = { fg = "yellow" }
 "markup.raw"           = { fg = "foreground" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 

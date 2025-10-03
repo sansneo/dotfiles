@@ -20,15 +20,15 @@ apk upgrade
 apk add --no-cache \
   7zip \
   atool \
-  build-base \
   busybox-extras \
   busybox-extras-openrc \
   busybox-openrc \
   busybox-suid \
+  croc \
   curl \
   ed \
   fd \
-  gdb \
+  file \
   git \
   git-lfs \
   git-lfs-zsh-completion \
@@ -38,22 +38,19 @@ apk add --no-cache \
   helix \
   helix-tree-sitter-vendor \
   jq \
-  ltrace \
-  markdown-oxide \
+  make \
   ncurses \
   openssh-client \
   openssl \
+  patch \
   pcre \
   rclone \
   ripgrep \
-  rizin \
   rsync \
   skim \
-  sqlite \
-  strace \
   tmux \
   tmux-zsh-completion \
-  croc \
+  which \
   xclip \
   zsh \
   zsh-completions
@@ -66,27 +63,32 @@ rc-update add syslog default
 rc-update add networking default
 rc-update add crond default
 
-# Installing Docker
+# Docker
 apk add --no-cache docker-engine docker-cli docker-cli-buildx docker-cli-compose docker-zsh-completion docker-openrc
 rc-update add containerd default
 rc-update add docker default
 adduser sans docker
 
-# Installing Marksman LSP and Markdown Oxide
+# Markdown
+apk add markdown-oxide
 curl -fLO https://github.com/artempyanykh/marksman/releases/latest/download/marksman-linux-x64
 mv marksman-linux-x64 "/home/sans/lsp/marksman"
 
-# Installing Go and development packages
+# C
+apk add --no-cache build-base gdb llvm clang21 clang21-analyzer clang21-extra-tools lldb
+apk add --no-cache strace ltrace rizin
+
+# Go
 apk add --no-cache go delve golangci-lint golangci-lint-zsh-completion
 doas -u sans go install golang.org/x/tools/gopls@latest
 doas -u sans go install golang.org/x/tools/cmd/goimports@latest
 doas -u sans go install github.com/pressly/goose/v3/cmd/goose@latest
 
-# Installing NodeJS and development packages
+# NodeJS
 apk add --no-cache nodejs npm
-npm install -g typescript-language-server typescript
+npm install -g typescript typescript-language-server
 
-# Installing Elixir and development packages
+# Elixir
 apk add --no-cache elixir
 curl -s https://api.github.com/repos/elixir-lsp/elixir-ls/releases/latest | \
 grep "browser_download_url.*elixir-ls.*\.zip" | \
@@ -97,10 +99,10 @@ chmod +x "/home/sans/lsp/language_server.sh"
 mv "/home/sans/lsp/language_server.sh" "/home/sans/lsp/elixir-ls"
 rm elixir-ls*.zip
 
-# Installing AWK development packages
-npm install -g awk-language-server
+# Sqlite
+apk add --no-cache sqlite
 
-# Installing Typst and development packages
+# Typst
 apk add --no-cache typst typst-zsh-completion tinymist
 
 # Removing default Helix themes
