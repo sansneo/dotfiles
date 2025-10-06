@@ -16,13 +16,17 @@ else
         | sk --margin 10% --color="bw")
 fi
 
+# Quit if the directory doesn't exist
 [ -z "$selected" ] && exit 0
 
+# Use the basename as the session name
+# session_name=$(basename "$selected")
+
 # Does the selected session exists?
-if ! tmux has-session -t "$selected" 2>/dev/null; then
-    tmux new-session -ds "$selected" -c "$HOME_DIR/$selected"
-    tmux select-window -t "$selected:1"
+if ! tmux has-session -t "$session_name" 2>/dev/null; then
+    tmux new-session -ds "$session_name" -c "$HOME_DIR/$selected"
+    tmux select-window -t "$session_name:1"
 fi
 
 # Switching to the selected session
-tmux switch-client -t "$selected"
+tmux switch-client -t "$session_name"
