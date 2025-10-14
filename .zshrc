@@ -39,6 +39,9 @@ alias tencent-cli="docker run --rm -it -v /home/$USER/.tencent:/root/.tencent -v
 alias terraform="docker run --rm -it -v /home/$USER/.terraform.d:/root/.terraform.d -v $PWD:/data hashicorp/terraform:light"
 alias firefox="firefox.exe"
 
+# Using the system clipboard with xclip
+# alias xclip="xclip -selection clipboard"
+
 # Plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
