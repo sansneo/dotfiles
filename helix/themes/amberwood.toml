@@ -1,11 +1,10 @@
-
 "attribute" = { fg = "blue" }
 "ui.virtual.wrap"="softwrap"
 "keyword" = "keyword"
 "keyword.control.conditional" = { fg = "conditional" }
 "keyword.directive" = "magenta" # -- preprocessor comments (#if in C)
 
-"namespace" = { fg = "namespace"  }
+"namespace" = { fg = "namespace" }
 
 "punctuation" = "gray06"
 "punctuation.delimiter" = "gray06"
@@ -15,7 +14,7 @@
 
 "variable" = {fg="fg"}
 "variable.builtin" = "bright_blue"
-"variable.parameter" = {fg="white" }
+"variable.parameter" = {fg="white"}
 "variable.other.member" = "white"
 
 "type" = "bright_blue"
@@ -24,12 +23,12 @@
 
 "constructor" = "yellow"
 
-"function" = {fg="function" }
+"function" = {fg="function"}
 "function.macro" = "bright_cyan"
 "function.builtin" = "support_function"
 
 "tag" = "tag"
-"comment" = { fg = "comment" }
+"comment" = { fg = "comment", modifiers = ["italic"] }
 
 "string" = "string"
 "string.regexp" = "green"
@@ -56,7 +55,7 @@
 "diff.minus" = "red"
 "diff.delta" = "bright_blue"
 
-"ui.background" = {}
+"ui.background" = { bg = "" }
 "ui.background.separator" = { fg = "fg" }
 
 "ui.linenr" = { fg = "gray04" }

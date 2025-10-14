@@ -17,7 +17,7 @@ function = "white"
 "function.macro" = {fg ="light_blue" }
 "function.builtin" = "white"
 tag = "tag"
-comment = { fg = "comment_color" }
+comment = { fg = "comment_color", modifiers = ["italic"] }
 constant = {fg ="white"}
 "constant.builtin" = "white"
 string = {fg="string"}
@@ -38,7 +38,7 @@ label = "label"
 "diff.minus" = "#f22c86"
 "diff.delta" = "info"
 
-"ui.background" = {}
+"ui.background" = { bg = "black" }
 "ui.background.separator" = { fg = "window_color" }
 "ui.linenr" = { fg = "window_color" }
 "ui.linenr.selected" = { fg = "light_blue" }

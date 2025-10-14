@@ -83,11 +83,11 @@
 "operator" = "nord9"
 "special" = "nord9"
 "tag" = "nord7"
-"comment" = { fg = "nord3_bright" }
+"comment" = { fg = "nord3_bright", modifiers = ["italic"] }
 
 ## EDITOR UI COLORS
 
-"ui.background" = {}
+"ui.background" = { bg = "" }
 "ui.text" = "nord4"
 "ui.window" = "nord1"
 

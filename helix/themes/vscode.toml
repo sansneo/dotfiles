@@ -48,7 +48,7 @@
 "markup.raw"           = "orange"
 
 # UI
-"ui.background"              = { fg = "light_gray" }
+"ui.background"              = { fg = "light_gray", bg = "" }
 "ui.window"                  = { bg = "widget" }
 "ui.popup"                   = { fg = "text", bg = "widget" }
 "ui.help"                    = { fg = "text", bg = "widget" }
