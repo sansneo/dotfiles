@@ -129,14 +129,14 @@ echo 'permit persist keepenv :wheel' > /etc/doas.conf
 # Required by /etc/init.d/networking that's needed for Docker
 touch /etc/network/interfaces
 # Firewall
-rc-update add iptables boot
+apk add nftables nftables-openrc
+rc-update add nftables boot
 # Cron
 rc-update add crond default
 ```
 
 8. Install my `wsl.conf`
 ```ini
-# /etc/wsl.conf
 [automount]
 enabled = true
 mountFsTab = true
@@ -156,10 +156,8 @@ command = "/sbin/openrc default"
 ```
 
 > [!WARNING]
-> To have access to the Windows $PATH in WSL you need to modify /etc/profile.  
-> Make $PATH reassign itself as in `export PATH="$PATH:everthing else"`  
-> and set `appendWindowsPath` to `true` in /etc/wsl.conf!
-
+> To have access to the Windows $PATH in WSL you need to modify `/etc/profile` and `wsl.conf`.  
+> Make $PATH reassign itself as in `export PATH="$PATH:..."` and set `appendWindowsPath` to `true`!
 
 9. Set the timezone and reboot
 ```sh
