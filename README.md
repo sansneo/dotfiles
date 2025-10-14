@@ -220,13 +220,18 @@ doas apk add sqlite
 # Typst
 doas apk add typst tinymist
 ```
-
-3. Docker
 ```sh
+# Docker
 doas apk add docker-engine docker-cli docker-cli-buildx docker-cli-compose docker-openrc
 doas rc-update add containerd default
 doas rc-update add docker default
 doas adduser sans docker
+```
+
+3. Create missing directories
+```sh
+# Obviously fill them up afterwards
+mkdir -pv ~/git/forks ~/notes ~/life
 ```
 
 4. Remove default Helix themes
