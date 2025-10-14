@@ -56,12 +56,12 @@ Use [manned.org](https://manned.org/) to access manual pages.
 > This skips the required and enforced login to a Microsoft account(also allowing an offline installation).  
 > The way you do this might be changing in the future apparently.
 
-2. Run the [debloater](https://github.com/Raphire/Win11Debloat)
+2. Run the [necessary debloater](https://github.com/Raphire/Win11Debloat).
 3. Install my Windows Terminal `settings.json`.
 4. Install Firefox Developer Edition with the Bitwarden, uBlock Origin(add the filters) and YouTube Unhook extensions then import `bookmarks.html`!
 
 > [!NOTE]
-> Just use Mozilla sync now
+> Just use Mozilla sync now.
 
 5. Go over Windows Settings and remember:
   * Automatically hide the Windows Taskbar.
@@ -71,8 +71,8 @@ Use [manned.org](https://manned.org/) to access manual pages.
 I basically use Windows Terminal, Visual Studio Code and Firefox 99% of the time and it's super comfy.
 
 > [!TIP]
-> Using Helix to code, but Visual Studio Code as my personal wiki.
-> Install the GitHub Theme, Vim and WSL extensions if you wanna try my config!
+> Using Helix to code, but Visual Studio Code as my personal wiki.  
+> Install the GitHub Theme, Vim and WSL extensions if you wanna try my config!  
 > It's really powerful even though right now am I using Helix bindings there as well.
 
 ### Alpine
@@ -90,7 +90,7 @@ wsl.exe -d AlpineWSL
 ```
 
 > [!TIP]
-> Use `-u` to specify a user as in `wsl.exe -d AlpineWSL -u root`
+> Use `-u` to specify a user as in `wsl.exe -d AlpineWSL -u root`.
 
 3. Switch to the edge repositories, update and upgrade
 ```sh
@@ -156,8 +156,8 @@ command = "/sbin/openrc default"
 ```
 
 > [!WARNING]
-> To have access to the Windows $PATH in WSL you need to modify /etc/profile
-> Make $PATH reassign itself as in `export PATH="$PATH:everthing else"`
+> To have access to the Windows $PATH in WSL you need to modify /etc/profile.  
+> Make $PATH reassign itself as in `export PATH="$PATH:everthing else"`  
 > and set `appendWindowsPath` to `true` in /etc/wsl.conf!
 
 
@@ -173,7 +173,7 @@ wsl.exe --terminate AlpineWSL
 ```
 
 > [!TIP]
-Use `wsl.exe --shutdown` to shutdown WSL completely affecting all installations
+Use `wsl.exe --shutdown` to shutdown WSL completely affecting all installations.
 
 ### Dotfiles
 1. Get `git` and clone this repository
@@ -248,7 +248,7 @@ doas chown sans -R /home/sans
 > [!NOTE]
 > Microcontrollers require additional setup to work in WSL.
 
-## Authorative documentation links
+## Authoritative documentation links
 * [Alpine Linux](https://alpinelinux.org)
 * [Linux](https://www.kernel.org)
 * [Busybox](https://busybox.net)
@@ -258,8 +258,8 @@ doas chown sans -R /home/sans
 * [LLVM](https://llvm.org)
 * [GNU Make](https://www.gnu.org/software/make)
 * [Go](https://go.dev)
-* [Javascript](https://tc39.es)
-* [Typescript](https://www.typescriptlang.org)
+* [JavaScript](https://tc39.es)
+* [TypeScript](https://www.typescriptlang.org)
 * [NodeJS](https://nodejs.org)
 * [Elixir](https://elixir-lang.org)
 * [Sqlite](https://sqlite.org)
@@ -270,7 +270,7 @@ doas chown sans -R /home/sans
 * [Markdown Oxide](https://oxide.md)
 * [OpenSSH](https://www.openssh.com)
 * [Docker](https://docs.docker.com)
-* [Kuberntes](https://kubernetes.io)
+* [Kubernetes](https://kubernetes.io)
 * [AWS](https://docs.aws.amazon.com)
 * [Azure](https://learn.microsoft.com/en-us/azure)
 * [Tencent](https://www.tencentcloud.com/document/product)
@@ -280,4 +280,4 @@ doas chown sans -R /home/sans
 ## Conclusion
 This is made by myself for myself.  
 Clone disks instead of reinstalling if you can as this takes like an hour to do.  
-Remember to sync stuff with an `crontab -e` entry and Google Drive!
+Remember to sync stuff with an in `crontab -e` and Google Drive!
