@@ -1,0 +1,23 @@
+# monitor(s)
+# xrandr --output HDMI-A-0 -s 1920x1080 -r 144 --primary --set TearFree on
+# xset s off
+
+# keyboard
+# setxkbmap us
+
+# mouse
+# xinput --set-prop "Name" "libinput Scrolling Pixel Distance" 10
+
+# disabling CAPS lock
+# setxkbmap -option caps:none
+
+# swapping ESC with CAPS lock
+# setxkbmap -option caps:swapescape
+
+# audio
+pulseaudio &
+
+# wm
+sxhkd &
+exec dbus-run-session dk
+

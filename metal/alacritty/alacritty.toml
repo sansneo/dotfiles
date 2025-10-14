@@ -1,0 +1,42 @@
+general.import = [
+"./him.toml",
+"./keyboard.toml",
+]
+
+[window]
+padding               = { x = 2, y = 2 }
+opacity               = 1.0
+blur                  = false
+class                 = { instance = "Alacritty", general = "Alacritty" }
+
+[font]
+normal                = { family = "Commit Mono", style = "Bold" }
+bold                  = { family = "Commit Mono", style = "Bold" }
+italic                = { family = "Commit Mono", style = "Italic" }
+bold_italic           = { family = "Commit Mono", style = "Bold Italic" }
+size                  = 14
+offset                = { x = 0, y = 0 }
+glyph_offset          = { x = 0, y = 0 }
+builtin_box_drawing = false
+
+[selection]
+save_to_clipboard     = true
+
+[cursor.style]
+shape                 = "Block"
+blinking              = "Never"
+
+[cursor.vi_mode_style]
+shape                 = "Block"
+blinking              = "Off"
+
+[cursor]
+blink_interval        = 1000
+blink_timeout         = 0
+
+[[hints.enabled]]
+command = "firefox-developer-edition"
+hyperlinks = true
+mouse.enabled = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`\\\\]+"
+
