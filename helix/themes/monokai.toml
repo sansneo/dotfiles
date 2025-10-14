@@ -2,7 +2,7 @@
 # The unofficial Monokai Pro theme, simply migrate from jetbrains monokai pro theme: https://github.com/subtheme-dev/monokai-pro
 # Credit goes to the original creator: https://monokai.pro
 
-"ui.linenr.selected" = { bg = "base3" }
+"ui.linenr.selected" = { bg = "" }
 "ui.text.focus" = { fg = "yellow", modifiers= ["bold"] }
 "ui.menu" = { fg = "base8", bg = "base3" }
 "ui.menu.selected" = { fg = "base2", bg = "yellow" }
