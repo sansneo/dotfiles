@@ -4,7 +4,7 @@
 
 "attribute" = { fg = "aqua1" }
 
-"comment" = { fg = "gray" }
+"comment" = { fg = "gray", modifiers = ["italic"] }
 
 "constant" = { fg = "purple1" }
 "constant.character" = { fg = "aqua1" }
@@ -47,7 +47,7 @@
 "markup.link.text"     = "purple0"
 "markup.link.url"      = "aqua1"
 "markup.list"          = "aqua1"
-"markup.quote"         = { fg = "yellow1" }
+"markup.quote"         = { fg = "yellow1", modifiers = ["italic"] }
 "markup.raw"           = { fg = "fg1" }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 
@@ -69,9 +69,9 @@
 "tag" = { fg = "aqua1" }
 
 "type" = { fg = "yellow1" }
-"type.enum.variant" = {}
+"type.enum.variant" = { }
 
-"ui.background" = {}
+"ui.background" = { bg = "" }
 "ui.bufferline" = { fg = "fg1", bg = "bg1" }
 "ui.bufferline.active" = { fg = "bg0", bg = "yellow0" }
 "ui.bufferline.background" = { bg = "bg2" }

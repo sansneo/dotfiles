@@ -1,8 +1,15 @@
-theme = "gruvbox"
+theme = "monokai"
 
 [editor]
 mouse = false
 true-color = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'<' = '>'
 
 [editor.cursor-shape]
 insert = "block"

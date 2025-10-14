@@ -1,6 +1,6 @@
 [[language]]
 name = "markdown"
-language-servers = ["marksman", "markdown-oxide"]
+language-servers = ["markdown-oxide"]
 auto-format = true 
 
 [[language]]
