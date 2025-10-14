@@ -1,0 +1,54 @@
+#!/bin/sh
+
+# loading sxhkd
+pgrep sxhkd || sxhkd -c "$HOME/.config/dk/sxhkdrc" &
+
+logfile="$HOME/.dklog"
+{ # compound command to redirect all output
+
+	# number of workspaces
+	dkcmd set numws=4
+
+	# defaulting to the tile layout
+	dkcmd set ws=_ apply layout=tile master=1 stack=3 gap=4 msplit=0.6 ssplit=0.4
+
+	# workspaces names
+	dkcmd set \
+		ws=1  name="alacritty" \
+		ws=2  name="firefox" \
+		ws=3  name="vscode" \
+		ws=4  name="anything"
+		 
+		# minimum width/height for resizing and minimum allowed on-screen when moving
+		dkcmd set win_minwh=50 win_minxy=10
+    
+		# mantaining gaps and borders in single window layouts
+		dkcmd set smart_gap=false smart_border=false
+    
+		# obeying hints on windows that draw their own
+		dkcmd set obey_motif=true
+
+		# borders
+		dkcmd set border width=0 outer_width=0 \
+			colour \
+			focus='#4ad66d' \
+			unfocus='#ffffff' \
+			urgent='#ee5555' \
+			outer_focus='#4ad66d' \
+			outer_unfocus='#ffffff' \
+			outer_urgent='#222222'
+
+		# rules
+		dkcmd rule class="^Alacritty$" ws=1 focus=true
+		dkcmd rule class="^Firefox.*$" ws=2 focus=true
+		dkcmd rule class="^Code.*$" ws=3 focus=true
+		dkcmd rule class="^Zathura$" ws=4 focus=true
+
+		# apply current rules
+		dkcmd rule apply '*'
+} >> "$logfile" 2>&1
+
+# Startup
+alacritty &
+firefox-developer-edition &
+code-oss ~/life &

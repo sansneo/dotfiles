@@ -11,12 +11,12 @@ apk add efibootmgr os-prober \
   mesa-vulkan-ati vulkan-loader \
   gstreamer gstreamer-vaapi
   
-# Services(dbus, elogind and tlp)
+# Services
 apk add dbus dbus-openrc \
   elogind elogind-openrc \
   tlp tlp-openrc 
 
-# Xorg minimal installation with selected utilities
+# Xorg(minimal installation with selected utilities)
 apk add xorg-server xinit xrandr \
   setxkbmap xset xinput xclip xprop \
   xdg-user-dirs
@@ -25,10 +25,12 @@ apk add xorg-server xinit xrandr \
 apk add font-noto font-noto-cjk font-noto-emoji \
   font-commit-mono font-liberation font-jetbrains-mono font-mononoki
 
-# Audio and Bluetooth
+# Audio
 apk add alsa-firmware sof-firmware \
-  pulseaudio pulseaudio-openrc \
-  bluez-firmware \
+  pulseaudio pulseaudio-openrc
+
+# Bluetooth
+apk add bluez-firmware \
   bluez bluez-openrc
 
 # Programs
@@ -36,9 +38,7 @@ apk add \
   alacritty \
   dk sxhkd \
   dmenu scrot \
-  zathura zathura-pdf-mupdf zathura-cb \
   nsxiv xwallpaper \
   mpv obs-studio \
-  qbittorrent \
-  firefox-developer-edition \
-  code-oss
+  zathura zathura-pdf-mupdf zathura-cb \
+  code-oss firefox-developer-edition qbittorrent
