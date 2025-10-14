@@ -108,8 +108,8 @@ apk add busybox-suid busybox-openrc busybox-extras busybox-extras-openrc
 
 5. Get `zsh`, add a standard user and assign groups
 ```sh
-apk add zsh
-adduser -h /home/sans -s /bin/zsh sans
+apk add zsh ncurses pcre
+adduser -h /home/sans -s /bin/sans
 adduser sans wheel
 adduser sans users
 adduser sans audio
