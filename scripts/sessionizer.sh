@@ -18,11 +18,14 @@ fi
 
 [ -z "$selected" ] && exit 0
 
-# Does the selected session exists?
-if ! tmux has-session -t "$selected" 2>/dev/null; then
-    tmux new-session -ds "$selected" -c "$HOME_DIR/$selected"
-    tmux select-window -t "$selected:1"
+# Extracting the basename to use it as the session name
+session_name=$(basename "$selected")
+
+# Does the selected session exist?
+if ! tmux has-session -t "=$session_name" 2>/dev/null; then
+    tmux new-session -ds "$session_name" -c "$HOME_DIR/$selected"
+    tmux select-window -t "$session_name:1"
 fi
 
 # Switching to the selected session
-tmux switch-client -t "$selected"
+tmux switch-client -t "=$session_name"
