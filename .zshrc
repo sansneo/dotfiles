@@ -19,9 +19,7 @@ export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$
 # Environment
 export HISTFILE=~/.history HISTSIZE=1000 SAVEHIST=1000
 export EDITOR="hx" VISUAL="$EDITOR"
-export BROWSER="firefox.exe"
-PATH="$PATH:/mnt/c/Program Files/Firefox Developer Edition"
-PATH="$PATH:/mnt/c/Program Files/Microsoft VS Code/bin"
+export BROWSER="firefox-developer-edition"
 export PATH="$PATH:$HOME/go/bin"
 
 # Aliases
@@ -31,16 +29,21 @@ alias cp="cp -v" mv="mv -v" rm="rm -v"
 alias free="free -h" df="df -h" dh="dh -h"
 alias fd="fd --hidden" rg="rg --hidden"
 alias sk="sk --margin 10% --color='bw'"
-alias q="docker run --rm -it -v /etc/resolv.conf:/etc/resolv.conf ghcr.io/natesales/q"
-alias kubectl="docker run --rm -it -v /home/$USER/.kube:/root/.kube bitnami/kubectl"
-alias aws-cli="docker run --rm -it -v /home/$USER/.aws:/root/.aws -v $PWD:/data amazon/aws-cli"
-alias azure-cli="docker run --rm -it -v /home/$USER/.azure:/root/.azure -v $PWD:/data mcr.microsoft.com/azure-cli"
-alias tencent-cli="docker run --rm -it -v /home/$USER/.tencent:/root/.tencent -v $PWD:/data tencentcloud/tencentcloud-cli"
-alias terraform="docker run --rm -it -v /home/$USER/.terraform.d:/root/.terraform.d -v $PWD:/data hashicorp/terraform:light"
-alias firefox="firefox.exe"
-
-# Using the system clipboard with xclip
-# alias xclip="xclip -selection clipboard"
+# Dockerized
+alias q="docker run --rm -it --network host ghcr.io/natesales/q"
+alias kubectl="docker run --rm -it -v $HOME/.kube:/root/.kube -v $PWD:/app -w /app bitnami/kubectl"
+alias aws-cli="docker run --rm -it -v $HOME/.aws:/root/.aws -v $PWD:/aws -w /aws amazon/aws-cli"
+alias azure-cli="docker run --rm -it -v $HOME/.azure:/root/.azure -v $PWD:/azure -w /azure mcr.microsoft.com/azure-cli az"
+alias tencent-cli="docker run --rm -it -v $HOME/.tencent:/root/.tencent -v $PWD:/tencent -w /tencent tencentcom/tencentcloud-cli"
+alias terraform="docker run --rm -it -v $HOME/.terraform.d:/root/.terraform.d -v $PWD:/terraform -w /terraform hashicorp/terraform:light"
+# Flatapks
+alias heroic="flatpak run com.heroicgameslauncher.hgl"
+alias krita="flatpak run org.kde.krita"
+alias kdenlive="flatpak run org.kde.kdenlive"
+alias rust-desk="XDG_SESSION_TYPE=x11 flatpak run com.rustdesk.RustDesk"
+alias android-studio="flatpak run com.google.AndroidStudio"
+# Using the system clipboard by default
+alias xclip="xclip -selection clipboard"
 
 # Plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -62,5 +65,5 @@ zle -N edit-command-line
 bindkey "^E" edit-command-line
 
 # Tmux
-# [[ -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As life -n main -c ~/life
-[[ -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As home
+# [[ $DISPLAY && -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As life -n main -c ~/life
+[[ $DISPLAY && -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As home
