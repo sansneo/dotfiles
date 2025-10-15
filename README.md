@@ -199,8 +199,10 @@ doas apk add llvm lldb clang21 clang21-analyzer clang21-extra-tools make
 ```sh
 # Go
 doas apk add go delve golangci-lint
-go install golang.org/x/tools/gopls@latest
 go install golang.org/x/tools/cmd/goimports@latest
+go install golang.org/x/tools/gopls@latest
+go install golang.org/x/pkgsite/cmd/pkgsite@latest
+go install golang.org/x/vuln/cmd/govulncheck@latest
 go install github.com/pressly/goose/v3/cmd/goose@latest
 ```
 ```sh
