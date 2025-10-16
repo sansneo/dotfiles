@@ -190,7 +190,7 @@ doas apk add \
   tmux markdown-oxide\
   ripgrep fd skim jq \
   strace ltrace rizin \
-  rsync rclone
+  rsync rclone xclip
 ```
 ```sh
 # C on LLVM  
