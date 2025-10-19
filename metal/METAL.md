@@ -23,6 +23,7 @@ echo "https://ap.edge.kernel.org/alpine/edge/community" >> /etc/apk/repositories
 echo "https://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 echo "https://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+```
 ```sh
 apk update
 apk upgrade
@@ -30,7 +31,7 @@ apk upgrade
 > [!WARNING]
 > To upgrade to edge you need to use the merge script for now!
 
-4. Install Busybox OpenRC.
+4. Install `busybox` packages.
 ```sh
 apk add busybox-suid busybox-openrc busybox-extras busybox-extras-openrc
 ```
@@ -38,7 +39,7 @@ apk add busybox-suid busybox-openrc busybox-extras busybox-extras-openrc
 5. Get `zsh`, add a standard user and assign groups.
 ```sh
 apk add zsh ncurses pcre
-adduser -h /home/sans -s /bin/zsh
+adduser -h /home/sans -s /bin/zsh sans
 adduser sans wheel
 adduser sans users
 adduser sans audio
@@ -66,7 +67,7 @@ rc-update add nftables boot
 apk add dbus dbus-x11 dbus-openrc
 rc-update add dbus default
 # Elogind
-apk add elogind util-login-linux elogind-openrc
+apk add elogind util-linux-login elogind-openrc
 rc-update add elogind
 # Polkit
 apk add polkit polkit-openrc
@@ -96,7 +97,7 @@ doas apk add efibootmgr os-prober \
 ```sh
 doas doas apk add \
   atool 7zip \
-  curl openssh \
+  curl openssh-client \
   ed helix helix-tree-sitter-vendor \
   tmux markdown-oxide\
   ripgrep fd skim jq \
@@ -164,7 +165,7 @@ doas adduser sans pulse
 ```sh
 # Bluetooth
 doas apk add bluez-firmware bluez bluez-openrc
-doas apk blueman
+doas apk add blueman
 doas rc-update add bluetooth boot
 ```
 
@@ -186,7 +187,7 @@ doas apk add \
 ```sh
 # Obviously fill them up afterwards
 mkdir -pv ~/git/forks ~/notes ~/life
-mkdir -pv ~/downloads ~/documents ~/audios ~/pictures/screenshots ~/videos
+mkdir -pv ~/downloads ~/documents ~/audios ~/pictures/screenshots ~/videos ~/games
 ```
 
 17. Remove default Helix themes.
@@ -223,6 +224,9 @@ doas flatpak install flathub com.rustdesk.RustDesk
 doas flatpak install flathub org.kde.krita
 doas flatpak install flathub org.kde.kdenlive
 doas flatpak install flathub com.google.AndroidStudio
+# Overrides
+flatpak override --user --filesystem=~/games com.heroicgameslauncher.hgl
+flatpak override --user --nofilesystem=~/Games/Heroic com.heroicgameslauncher.hgl
 ```
 > [!TIP]
 > Get `xone-src` and run `xone-get-firmware.sh` to use an Xbox One controller.

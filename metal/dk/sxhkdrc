@@ -3,10 +3,14 @@ alt + p
     dmenu_run -nb '#000000' -nf '#ffffff' -sb '#4ad66d' -sf '#000000' -fn 'CommitMono:size=14:bold' -l 0
 
 # screenshot(screenshots)
-alt + {shift + o,Print}
-    scrot -s ~/pictures/screenshots/%Y-%m-%d-%H%M%S.png -e 'xclip -selection clipboard -target image/png -i $f' # focus next or previous window alt + {j,k} dkcmd win focus {next,prev} # move window
+alt + {o,@Print}
+    scrot -s ~/pictures/screenshots/%Y-%m-%d-%H%M%S.png -e 'xclip -selection clipboard -target image/png -i $f'
 
-# focus window
+# focus next or previous window
+alt + {j,k}
+	dkcmd win focus {next,prev}
+
+# move window
 alt + shift + {h,j,k,l}
 	dkcmd win resize {x=-30,y=+30,y=-30,x=+30}
 
@@ -29,6 +33,10 @@ alt + {_,shift + }{i,d}
 # cycle tiled windows
 alt + {_,shift + }c
 	dkcmd win cycle
+
+# toggle fullscreen
+alt + shift + f
+	dkcmd win full
 
 # change active workspace layout or cycle between them
 alt + super + {t,m,g,r,u,c}

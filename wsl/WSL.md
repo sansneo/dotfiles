@@ -135,7 +135,7 @@ git clone https://github.com/sansneo/dotfiles
 cd dotfiles
 ```
 
-2. Install rest of the toolset
+2. Install the toolset
 ```sh
 doas apk add \
   atool 7zip \

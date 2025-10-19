@@ -47,8 +47,8 @@ This is what I am working on right now and it's great!
 Use [manned.org](https://manned.org/) to access manual pages.
 
 ## Installation
-* On [Windows WSL](./WSL.md)
-* On [bare metal](./METAL.md)
+* On [Windows WSL](./wsl/WSL.md)
+* On [bare metal](./metal/METAL.md)
 
 ## Authoritative documentation links
 * [Alpine Linux](https://alpinelinux.org)

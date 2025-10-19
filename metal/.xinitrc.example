@@ -1,5 +1,6 @@
 # monitor(s)
 # xrandr --output HDMI-A-0 -s 1920x1080 -r 144 --primary --set TearFree on
+# xrandr --output eDP-1 --off
 # xset s off
 
 # keyboard
