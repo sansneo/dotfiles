@@ -1,52 +1,51 @@
 # dmenu(launcher)
-super + p
-    dmenu_run -nb '#000000' -nf '#ffffff' -sb '#4ad66d' -sf '#000000' -fn 'CommitMono:size=12:bold' -l 0
+alt + p
+    dmenu_run -nb '#000000' -nf '#ffffff' -sb '#4ad66d' -sf '#000000' -fn 'CommitMono:size=14:bold' -l 0
 
-# scrot(screenshots)
-{super + shift + o,Print}
-    scrot -s ~/pictures/screenshots/%Y-%m-%d-%H%M%S.png -e 'xclip -selection clipboard -target image/png -i $f'
+# screenshot(screenshots)
+alt + {shift + o,Print}
+    scrot -s ~/pictures/screenshots/%Y-%m-%d-%H%M%S.png -e 'xclip -selection clipboard -target image/png -i $f' # focus next or previous window alt + {j,k} dkcmd win focus {next,prev} # move window
 
-# focus next or previous window
-super + {j,k}
-	dkcmd win focus {next,prev}
-
-# move window
-super + shift + {h,j,k,l}
+# focus window
+alt + shift + {h,j,k,l}
 	dkcmd win resize {x=-30,y=+30,y=-30,x=+30}
 
 # resize window
-super + ctrl + {h,j,k,l}
+alt + ctrl + {h,j,k,l}
 	dkcmd win resize {w=-30,h=+30,h=-30,w=+30}
 
-# view, send, or follow to workspace
-super + {_,shift + ,ctrl + }{a,s,d,w}
+# view, send or follow to workspace
+alt + {_,shift + ,super + }{a,s,d,w}
 	dkcmd ws {view,send,follow} {1,2,3,4}
 
-# view previous workspace
+# close window or swap tiled window in/out of master
+alt + shift + {q,space}
+	dkcmd win {kill,swap}
+
+# change number of windows in master or first stack
+alt + {_,shift + }{i,d}
+	dkcmd set {master,stack} {+1,-1}
+
+# cycle tiled windows
+alt + {_,shift + }c
+	dkcmd win cycle
+
+# change active workspace layout or cycle between them
+alt + super + {t,m,g,r,u,c}
+	dkcmd set layout {tile,mono,grid,spiral,tstack,cycle}
+
+# view last workspace
 alt + Tab
 	dkcmd ws view last
 
-# close window, swap tiled window in/out of master or cycle tiled windows
-super + shift + {q,space,c}
-	dkcmd win {kill,swap,cycle}
-
-# change number of windows in master or first stack
-super + {_,shift + }{i,d}
-	dkcmd set {master,stack} {+1,-1}
-
-# change active workspace layout or cycle between them
-super + alt + {t,m,g,s,u,c}
-	dkcmd set layout {tile,mono,grid,spiral,tstack,cycle}
-
 # toggle borders
-super + b
-    dkcmd set border width {8 0}
+alt + bracket{left,right}
+    dkcmd set border width {8,0}
 
 # reload sxhkd
-super + shift + x
+alt + shift + x
 	pkill -USR1 -x sxhkd
 
 # reload dk
-super + shift + r
+alt + shift + r
 	dkcmd restart
-
