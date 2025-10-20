@@ -34,6 +34,10 @@ alt + {_,shift + }{i,d}
 alt + {_,shift + }c
 	dkcmd win cycle
 
+# toggle fullscreen
+alt + shift + f
+	dkcmd win full
+
 # change active workspace layout or cycle between them
 alt + super + {t,m,g,r,u,c}
 	dkcmd set layout {tile,mono,grid,spiral,tstack,cycle}
