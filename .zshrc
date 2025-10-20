@@ -64,6 +64,9 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^E" edit-command-line
 
+# Fixing highlighting colors
+ZSH_HIGHLIGHT_STYLES[comment]=fg=green
+
 # Tmux
 # [[ $DISPLAY && -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As life -n main -c ~/life
 [[ $DISPLAY && -z $TMUX && -z $VSCODE_INJECTION ]] && exec tmux new -As home
