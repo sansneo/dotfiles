@@ -9,7 +9,6 @@ setopt nomenucomplete
 setopt interactive_comments
 setopt appendhistory
 setopt inc_append_history
-setopt share_history
 setopt hist_ignore_dups
 setopt hist_ignore_space
 
@@ -17,10 +16,10 @@ setopt hist_ignore_space
 export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$(tput setaf 15)%}%~ %{$(tput sgr0)%}$ "
 
 # Environment
-export HISTFILE=~/.history HISTSIZE=1000 SAVEHIST=1000
+export HISTFILE=~/.history HISTSIZE=10000 SAVEHIST=10000
 export EDITOR="hx" VISUAL="$EDITOR"
 export BROWSER="firefox-developer-edition"
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/go/bin:$HOME/.flatpak"
 
 # Aliases
 alias ls="ls -gh --group-directories-first --color=always"
@@ -31,6 +30,8 @@ alias fd="fd --hidden" rg="rg --hidden"
 alias sk="sk --margin 10% --color='bw'"
 # Dockerized
 alias q="docker run --rm -it --network host ghcr.io/natesales/q"
+alias adb="docker run --rm -it --network host --privileged -v /dev/bus/usb:/dev/bus/usb sorccu/adb adb"
+alias fastboot="docker run --rm -it --network host --privileged -v /dev/bus/usb:/dev/bus/usb sorccu/adb fastboot"
 alias kubectl="docker run --rm -it -v $HOME/.kube:/root/.kube -v $PWD:/app -w /app bitnami/kubectl"
 alias aws-cli="docker run --rm -it -v $HOME/.aws:/root/.aws -v $PWD:/aws -w /aws amazon/aws-cli"
 alias azure-cli="docker run --rm -it -v $HOME/.azure:/root/.azure -v $PWD:/azure -w /azure mcr.microsoft.com/azure-cli az"
@@ -44,6 +45,7 @@ alias rust-desk="XDG_SESSION_TYPE=x11 flatpak run com.rustdesk.RustDesk"
 alias android-studio="flatpak run com.google.AndroidStudio"
 # Using the system clipboard by default
 alias xclip="xclip -selection clipboard"
+alias nsxiv="nsxiv --no-bar"
 
 # Plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"

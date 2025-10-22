@@ -95,14 +95,14 @@ doas apk add efibootmgr os-prober \
 
 9. Install the toolset.
 ```sh
-doas doas apk add \
+doas apk add \
   atool 7zip \
   curl openssh-client \
-  ed helix helix-tree-sitter-vendor \
+  helix helix-tree-sitter-vendor \
   tmux markdown-oxide\
   ripgrep fd skim jq \
   strace ltrace rizin \
-  rsync rclone file
+  rsync rclone scrcpy file
 ```
 ```sh
 # C on LLVM  
@@ -179,7 +179,6 @@ doas apk add \
   mpv obs-studio \
   zathura zathura-pdf-mupdf zathura-cb \
   code-oss \
-  signal-desktop \
   firefox-developer-edition qbittorrent
 ```
 
@@ -221,12 +220,14 @@ doas adduser sans flatpak
 # Get the applications
 doas flatpak install flathub com.heroicgameslauncher.hgl
 doas flatpak install flathub com.rustdesk.RustDesk
+doas flatpak install flathub org.signal.Signal
 doas flatpak install flathub org.kde.krita
 doas flatpak install flathub org.kde.kdenlive
 doas flatpak install flathub com.google.AndroidStudio
 # Overrides
-flatpak override --user --filesystem=~/games com.heroicgameslauncher.hgl
-flatpak override --user --nofilesystem=~/Games/Heroic com.heroicgameslauncher.hgl
+doas flatpak override --user --filesystem=~/games com.heroicgameslauncher.hgl
+doas flatpak override --user --nofilesystem=~/Games/Heroic com.heroicgameslauncher.hgl
+doas flatpak override --user org.signal.Signal --filesystem=~/downloads
 ```
 > [!TIP]
 > Get `xone-src` and run `xone-get-firmware.sh` to use an Xbox One controller.

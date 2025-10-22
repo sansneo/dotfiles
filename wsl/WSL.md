@@ -46,14 +46,28 @@ wsl.exe -d AlpineWSL
 > [!TIP]
 > Use `-u` to specify a user as in `wsl.exe -d AlpineWSL -u root`.
 
-3. Switch to the edge repositories, update and upgrade
+3. Get `openssl` and switch to the [edge repositories](https://wiki.alpinelinux.org/wiki/Repositories), update and upgrade.
 ```sh
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
-echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+apk add openssl
+```
+```sh
+# Amsterdam
+echo "https://eu.edge.kernel.org/alpine/edge/main" > /etc/apk/repositories
+echo "https://eu.edge.kernel.org/alpine/edge/community" >> /etc/apk/repositories
+# Japan
+echo "https://ap.edge.kernel.org/alpine/edge/main" >> /etc/apk/repositories
+echo "https://ap.edge.kernel.org/alpine/edge/community" >> /etc/apk/repositories
+# CDN
+echo "https://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
+echo "https://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+```
+```sh
 apk update
 apk upgrade
 ```
+> [!WARNING]
+> To upgrade to edge you need to use the merge script for now!
 
 4. Install Busybox OpenRC and the Busybox SUID
 ```sh
@@ -139,12 +153,12 @@ cd dotfiles
 ```sh
 doas apk add \
   atool 7zip \
-  curl openssl openssh \
-  file ed helix helix-tree-sitter-vendor \
+  curl openssh \
+  helix helix-tree-sitter-vendor \
   tmux markdown-oxide\
   ripgrep fd skim jq \
   strace ltrace rizin \
-  rsync rclone xclip
+  rsync rclone file xclip
 ```
 ```sh
 # C on LLVM  

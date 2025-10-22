@@ -1,0 +1,2 @@
+0 */6 * * * rclone sync /home/sans/audios/ drive:audios ; rclone sync /home/sans/documents/ drive:documents
+0 */3 * * * rclone sync /home/sans/life/ drive:life ; rclone sync /home/sans/content/ drive:content ; rclone sync /home/sans/notes/ drive:notes

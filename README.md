@@ -21,7 +21,7 @@ This is what I am working on right now and it's great!
 * archiver: atool
 * transfer: curl
 * hashing/encryption: openssl
-* editors: ed, vi and helix
+* editors: vi and helix
 * multiplexer: tmux
 * modernity: fd, rg, sk and jq
 * shell: zsh
@@ -36,9 +36,8 @@ This is what I am working on right now and it's great!
   * typst(typesetting)
 * hacking: strace, ltrace and rizin
 * vcs: git(with github-cli)
-* wiki: markdown oxide
-* remote: openssh
-* backups: rsync and rclone
+* remote: openssh, rsync and rclone
+* mobile: adb, fastboot and scrcpy
 * containers: docker and kubernetes
 * infrastructure: aws, azure, tencent, terraform and polumi
 * init: openrc
@@ -79,7 +78,18 @@ Use [manned.org](https://manned.org/) to access manual pages.
 * [HashiCorp](https://developer.hashicorp.com)
 * [Polumi](https://www.pulumi.com)
 
+## Backup
+Once satisfied with the system looks you can easily clone it using `dd`!
+```sh
+cat /proc/partitions
+dd if=/dev/nvme0n1 bs=4M of=/dev/nvme0n2
+```
+Then to restore it you simply would.
+```sh
+dd if=/dev/nvme0n2 bs=4M of=/dev/nvme0n1
+```
+
 ## Conclusion
 This is made by myself for myself.  
-Clone disks instead of reinstalling if you can as this takes like an hour to do.  
-Remember to sync stuff with an in `crontab -e` and Google Drive!
+Clone disks or use images instead of reinstalling if you can as this takes like an hour to do.  
+Remember to sync stuff with an entry in `crontab -e` on Google Drive or AWS!
