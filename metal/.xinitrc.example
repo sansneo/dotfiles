@@ -1,5 +1,5 @@
 # monitor(s)
-# xrandr --output HDMI-A-0 -s 1920x1080 -r 144 --primary --set TearFree on
+# xrandr --output HDMI-1 --mode 1920x1080 --rate 165.00 --set "vrr_capable" 1 --primary
 # xrandr --output eDP-1 --off
 # xset s off
 
@@ -17,6 +17,9 @@
 
 # audio
 pulseaudio &
+
+# wallpaper
+# xwallpaper --center ~/pictures/wallpaper.jpg
 
 # wm
 sxhkd &

@@ -3,7 +3,9 @@ alt + p
     dmenu_run -nb '#000000' -nf '#ffffff' -sb '#4ad66d' -sf '#000000' -fn 'CommitMono:size=14:bold' -l 0
 
 # screenshot(screenshots)
-alt + {o,@Print}
+alt + shift + o
+    scrot -s ~/pictures/screenshots/%Y-%m-%d-%H%M%S.png -e 'xclip -selection clipboard -target image/png -i $f'
+@Print
     scrot -s ~/pictures/screenshots/%Y-%m-%d-%H%M%S.png -e 'xclip -selection clipboard -target image/png -i $f'
 
 # focus next or previous window
@@ -45,10 +47,16 @@ alt + super + {t,m,g,r,u,c}
 # view last workspace
 alt + Tab
 	dkcmd ws view last
+alt + BackSpace
+	dkcmd ws view last
 
 # toggle borders
 alt + bracket{left,right}
     dkcmd set border width {8,0}
+
+# toggle gaps
+alt + shift + bracket{left,right}
+    dkcmd set border gap {4,0}
 
 # reload sxhkd
 alt + shift + x

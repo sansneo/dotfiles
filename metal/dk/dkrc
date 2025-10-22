@@ -10,7 +10,7 @@ logfile="$HOME/.dklog"
   dkcmd set numws=4
 
   # defaulting to the tile layout
-	dkcmd set ws=_ apply layout=tile master=1 stack=3 gap=4 msplit=0.6 ssplit=0.4
+	dkcmd set ws=_ apply layout=tile master=1 stack=3 gap=0 msplit=0.6 ssplit=0.4
 
   # workspaces names
 	dkcmd set \
