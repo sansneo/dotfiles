@@ -179,7 +179,6 @@ doas apk add \
   mpv obs-studio \
   zathura zathura-pdf-mupdf zathura-cb \
   code-oss \
-  signal-desktop \
   firefox-developer-edition qbittorrent
 ```
 
@@ -221,6 +220,7 @@ doas adduser sans flatpak
 # Get the applications
 doas flatpak install flathub com.heroicgameslauncher.hgl
 doas flatpak install flathub com.rustdesk.RustDesk
+doas flatpak install flathub org.signal.Signal
 doas flatpak install flathub org.kde.krita
 doas flatpak install flathub org.kde.kdenlive
 doas flatpak install flathub com.google.AndroidStudio
