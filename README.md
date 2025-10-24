@@ -37,7 +37,7 @@ This is what I am working on right now and it's great!
 * hacking: strace, ltrace and rizin
 * vcs: git(with github-cli)
 * remote: openssh, rsync and rclone
-* mobile: adb and fastboot
+* mobile: adb, fastboot and scrcpy
 * containers: docker and kubernetes
 * infrastructure: aws, azure, tencent, terraform and polumi
 * init: openrc

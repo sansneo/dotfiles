@@ -102,7 +102,7 @@ doas apk add \
   tmux markdown-oxide\
   ripgrep fd skim jq \
   strace ltrace rizin \
-  rsync rclone file
+  rsync rclone scrcpy file
 ```
 ```sh
 # C on LLVM  
@@ -227,6 +227,7 @@ doas flatpak install flathub com.google.AndroidStudio
 # Overrides
 doas flatpak override --user --filesystem=~/games com.heroicgameslauncher.hgl
 doas flatpak override --user --nofilesystem=~/Games/Heroic com.heroicgameslauncher.hgl
+doas flatpak override --user org.signal.Signal --filesystem=~/downloads
 ```
 > [!TIP]
 > Get `xone-src` and run `xone-get-firmware.sh` to use an Xbox One controller.

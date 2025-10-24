@@ -9,7 +9,6 @@ setopt nomenucomplete
 setopt interactive_comments
 setopt appendhistory
 setopt inc_append_history
-setopt share_history
 setopt hist_ignore_dups
 setopt hist_ignore_space
 
@@ -17,7 +16,7 @@ setopt hist_ignore_space
 export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$(tput setaf 15)%}%~ %{$(tput sgr0)%}$ "
 
 # Environment
-export HISTFILE=~/.history HISTSIZE=1000 SAVEHIST=1000
+export HISTFILE=~/.history HISTSIZE=10000 SAVEHIST=10000
 export EDITOR="hx" VISUAL="$EDITOR"
 export BROWSER="firefox-developer-edition"
 export PATH="$PATH:$HOME/go/bin:$HOME/.flatpak"
@@ -46,7 +45,6 @@ alias rust-desk="XDG_SESSION_TYPE=x11 flatpak run com.rustdesk.RustDesk"
 alias android-studio="flatpak run com.google.AndroidStudio"
 # Using the system clipboard by default
 alias xclip="xclip -selection clipboard"
-# Opening without the bar by default
 alias nsxiv="nsxiv --no-bar"
 
 # Plugins
