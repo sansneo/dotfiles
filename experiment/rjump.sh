@@ -2,7 +2,6 @@
 
 # Create a new window in the life session and run a command
 tmux new-window -t life -n "search" -c ~/life "
-# Use passed argument as search directory, defaults to $HOME
 SEARCH_DIR='${1:-$HOME}'
 # Fuzzy finds in the search directory
 SELECTED_FILE=\$(fd --type f --hidden . \"\$SEARCH_DIR\" \\

@@ -12,10 +12,10 @@ You can do pretty much everything on Windows WSL!
 
 2. Run the [necessary debloater](https://github.com/Raphire/Win11Debloat).
 3. Install my Windows Terminal `settings.json`.
-4. Install Firefox Developer Edition with the Bitwarden, uBlock Origin(add the filters) and YouTube Unhook extensions then import `bookmarks.html`!
+4. Install Firefox with the Bitwarden, uBlock Origin(add the filters) and YouTube Unhook extensions then import `bookmarks.html`!
 
 > [!NOTE]
-> Just use Mozilla sync now.
+> or just use Mozilla Sync.
 
 5. Go over Windows Settings and remember:
   * Automatically hide the Windows Taskbar.
@@ -27,7 +27,7 @@ I basically use Windows Terminal, Visual Studio Code and Firefox 99% of the time
 > [!TIP]
 > Using Helix to code, but Visual Studio Code as my personal wiki.  
 > Install the GitHub Theme, Vim and WSL extensions if you wanna try my config!  
-> It's really powerful even though right now am I using Helix bindings there as well.
+> It's really powerful.
 
 ### Alpine
 1. Enable the WSL and Virtual Machine Platform features and reboot.

@@ -1,9 +1,9 @@
 #!/bin/sh
 hour=$(date +%H)
 if [ "$hour" -lt 12 ]; then
-    echo "morning() $(date +%H:%M)"
+    echo "morning(workout, diet) $(date +%H:%M)"
 elif [ "$hour" -lt 17 ]; then
-    echo "afternoon() $(date +%H:%M)"
+    echo "afternoon(work/study pomodoro sessions) $(date +%H:%M)"
 else
-    echo "evening() $(date +%H:%M)"
+    echo "evening(aesthetics, watchlist, cry in your bed alone) $(date +%H:%M)"
 fi

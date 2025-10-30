@@ -102,7 +102,9 @@ doas apk add \
   tmux markdown-oxide\
   ripgrep fd skim jq \
   strace ltrace rizin \
-  rsync rclone scrcpy file
+  rsync rclone \
+  file yt-dlp scrcpy \
+  fastfetch
 ```
 ```sh
 # C on LLVM  
@@ -178,8 +180,7 @@ doas apk add \
   nsxiv xwallpaper \
   mpv obs-studio \
   zathura zathura-pdf-mupdf zathura-cb \
-  code-oss \
-  firefox-developer-edition qbittorrent
+  code-oss firefox signal-desktop qbittorrent
 ```
 
 16. Create missing directories!
@@ -220,14 +221,12 @@ doas adduser sans flatpak
 # Get the applications
 doas flatpak install flathub com.heroicgameslauncher.hgl
 doas flatpak install flathub com.rustdesk.RustDesk
-doas flatpak install flathub org.signal.Signal
 doas flatpak install flathub org.kde.krita
 doas flatpak install flathub org.kde.kdenlive
 doas flatpak install flathub com.google.AndroidStudio
 # Overrides
 doas flatpak override --user --filesystem=~/games com.heroicgameslauncher.hgl
 doas flatpak override --user --nofilesystem=~/Games/Heroic com.heroicgameslauncher.hgl
-doas flatpak override --user org.signal.Signal --filesystem=~/downloads
 ```
 > [!TIP]
 > Get `xone-src` and run `xone-get-firmware.sh` to use an Xbox One controller.

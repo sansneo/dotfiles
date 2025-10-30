@@ -16,10 +16,10 @@ setopt hist_ignore_space
 export PS1="%{$(tput setaf 9)%}%n%{$(tput setaf 15)%}@%{$(tput setaf 12)%}%m %{$(tput setaf 15)%}%~ %{$(tput sgr0)%}$ "
 
 # Environment
-export HISTFILE=~/.history HISTSIZE=10000 SAVEHIST=10000
-export EDITOR="hx" VISUAL="$EDITOR"
-export BROWSER="firefox-developer-edition"
+export HISTFILE="$HOME/.history" HISTSIZE=10000 SAVEHIST=10000
 export PATH="$PATH:$HOME/go/bin:$HOME/.flatpak"
+export EDITOR="hx" VISUAL="$EDITOR"
+export BROWSER="firefox"
 
 # Aliases
 alias ls="ls -gh --group-directories-first --color=always"
@@ -37,14 +37,11 @@ alias aws-cli="docker run --rm -it -v $HOME/.aws:/root/.aws -v $PWD:/aws -w /aws
 alias azure-cli="docker run --rm -it -v $HOME/.azure:/root/.azure -v $PWD:/azure -w /azure mcr.microsoft.com/azure-cli az"
 alias tencent-cli="docker run --rm -it -v $HOME/.tencent:/root/.tencent -v $PWD:/tencent -w /tencent tencentcom/tencentcloud-cli"
 alias terraform="docker run --rm -it -v $HOME/.terraform.d:/root/.terraform.d -v $PWD:/terraform -w /terraform hashicorp/terraform:light"
-# Flatapks
-alias heroic="flatpak run com.heroicgameslauncher.hgl"
-alias krita="flatpak run org.kde.krita"
-alias kdenlive="flatpak run org.kde.kdenlive"
-alias rust-desk="XDG_SESSION_TYPE=x11 flatpak run com.rustdesk.RustDesk"
-alias android-studio="flatpak run com.google.AndroidStudio"
-# Using the system clipboard by default
+
+# Using the system clipboard
 alias xclip="xclip -selection clipboard"
+
+# Disabling the bottom bar
 alias nsxiv="nsxiv --no-bar"
 
 # Plugins

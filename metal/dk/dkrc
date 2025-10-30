@@ -17,7 +17,7 @@ logfile="$HOME/.dklog"
 		ws=1 name="alacritty" \
 		ws=2 name="firefox" \
 		ws=3 name="code-oss" \
-		ws=4 name="anything" \
+		ws=4
 
 	# minimum width/height for resizing and minimum allowed on-screen when moving
 	dkcmd set win_minwh=50 win_minxy=10
@@ -38,9 +38,12 @@ logfile="$HOME/.dklog"
 		outer_urgent='#222222'
 
 	# window rules
-  dkcmd rule class="^Alacritty$" ws=1 focus=true
-  dkcmd rule class="^firefoxdeveloperedition$" ws=2 focus=true
+  dkcmd rule class="^alacritty$" ws=1 focus=true
+  dkcmd rule class="^firefox$" ws=2 focus=true
   dkcmd rule class="^code - oss$" ws=3 focus=true
+
+  # define mouse mod and move/resize buttons
+	dkcmd set mouse mod=super move=button1 resize=button3
 
 	# apply current rules
 	dkcmd rule apply '*'
@@ -49,5 +52,5 @@ logfile="$HOME/.dklog"
 
 # Startup
 alacritty &
-firefox-developer-edition &
+firefox &
 code-oss

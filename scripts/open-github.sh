@@ -10,7 +10,7 @@ if [[ $url == *github.com* ]]; then
         url="${url/:/\/}" 
         url="https://$url"
     fi
-    $BROWSER "$url" || firefox-developer-edition "$url" || firefox "$url"
+    $BROWSER "$url" || firefox "$url"
 else
     echo "This repository is not hosted on GitHub"
 fi
