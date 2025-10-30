@@ -45,6 +45,9 @@ This is what I am working on right now and it's great!
 
 Use [manned.org](https://manned.org/) to access manual pages.
 
+## Screenshots
+![setup](./screenshots/setup.png)
+
 ## Installation
 * On [Windows WSL](./wsl/WSL.md)
 * On [bare metal](./metal/METAL.md)
