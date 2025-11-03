@@ -3,9 +3,10 @@ export PS1='\[\033[31m\]\u\[\033[0m\]@\[\033[34m\]\h \[\033[0m\]\w \[\033[0m\]\$
 
 # Path
 PATH="$PATH:$HOME/go/bin"
+PATH="$PATH:/mnt/c/Program Files/Mozilla Firefox"
 export PATH
 export EDITOR="hx" VISUAL="$EDITOR"
-export BROWSER="/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
+export BROWSER="firefox.exe"
 
 # Aliases
 alias ls="ls -gh --group-directories-first --color=always"
