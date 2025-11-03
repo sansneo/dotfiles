@@ -1,9 +1,4 @@
 [[language]]
-name = "markdown"
-language-servers = ["markdown-oxide"]
-auto-format = true 
-
-[[language]]
 name = "go"
 roots = ["go.mod"]
 auto-format = true

@@ -4,14 +4,13 @@
 HOME_DIR="${HOME:-}"
 DIRS="$HOME_DIR
 $HOME_DIR/git
-$HOME_DIR/git/forks
-$HOME_DIR/notes"
+$HOME_DIR/git/forks"
 
 # This uses skim, but any other fuzzy finder will do
 if [ $# -eq 1 ]; then
     selected="$1"
 else
-    selected=$(fd --type=dir --max-depth=1 --absolute-path . $DIRS \
+    selected=$(for dir in $DIRS; do find "$dir" -type d -maxdepth 1 ! -path "$dir" ! -name ".*" 2>/dev/null ; done \
         | sed -e "s|$HOME_DIR/||" -e 's|/$||' \
         | sk --margin 10% --color="bw")
 fi

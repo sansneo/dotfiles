@@ -8,7 +8,6 @@ true-color = true
 '(' = ')'
 '[' = ']'
 '{' = '}'
-'"' = '"'
 
 [editor.cursor-shape]
 insert = "block"

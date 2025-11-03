@@ -1,0 +1,64 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "compatibility.allowHeadless": true,
+    "compatibility.enableUnfocusedAcrylic": false,
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "disableAnimations": true,
+    "keybindings": 
+    [
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "enter"
+        }
+    ],
+    "language": "en-US",
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "Dimidium",
+            "cursorColor": null,
+            "cursorShape": "filledBox",
+            "font": 
+            {
+                "builtinGlyphs": false,
+                "face": "CommitMono",
+                "size": 14,
+                "weight": "bold"
+            },
+            "intenseTextStyle": "all",
+            "scrollbarState": "hidden"
+        },
+        "list": 
+        [
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+    "schemes": [],
+    "searchWebDefaultQueryUrl": "https://google.com/search?q=%22%s%22",
+    "themes": []
+}

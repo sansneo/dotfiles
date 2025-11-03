@@ -1,0 +1,27 @@
+# Prompt
+export PS1='\[\033[31m\]\u\[\033[0m\]@\[\033[34m\]\h \[\033[0m\]\w \[\033[0m\]\$ '
+
+# Path
+PATH="$PATH:$HOME/go/bin"
+export PATH
+export EDITOR="hx" VISUAL="$EDITOR"
+export BROWSER="/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
+
+# Aliases
+alias ls="ls -gh --group-directories-first --color=always"
+alias l="ls" s="ls" sl="ls" lx="ls" lc="ls"
+alias cp="cp -v" mv="mv -v" rm="rm -v"
+alias free="free -h" df="df -h" dh="dh -h"
+alias sk="sk --margin 10% --color='bw'"
+
+# Docker
+alias adb="docker run --rm -it --network host --privileged -v /dev/bus/usb:/dev/bus/usb sorccu/adb adb"
+alias fastboot="docker run --rm -it --network host --privileged -v /dev/bus/usb:/dev/bus/usb sorccu/adb fastboot"
+alias kubectl="docker run --rm -it -v $HOME/.kube:/root/.kube -v $PWD:/app -w /app bitnami/kubectl"
+alias aws-cli="docker run --rm -it -v $HOME/.aws:/root/.aws -v $PWD:/aws -w /aws amazon/aws-cli"
+alias azure-cli="docker run --rm -it -v $HOME/.azure:/root/.azure -v $PWD:/azure -w /azure mcr.microsoft.com/azure-cli az"
+alias tencent-cli="docker run --rm -it -v $HOME/.tencent:/root/.tencent -v $PWD:/tencent -w /tencent tencentcom/tencentcloud-cli"
+alias terraform="docker run --rm -it -v $HOME/.terraform.d:/root/.terraform.d -v $PWD:/terraform -w /terraform hashicorp/terraform:light"
+
+# Tmux
+[ "$DISPLAY" ] && [ -z "$TMUX" ] && [ -z "$VSCODE_INJECTION" ] && exec tmux new -As home
