@@ -84,7 +84,7 @@ Add-AppxPackage Microsoft.WindowsTerminal.msixbundle
 > My VSCode config is awesome and you should give it a try.
 > Get the GitHub Theme and Vim extensions from the marketplace.
 
-10. Install qBittorrent, Nomacs, VLC, OBS and Capcut
+10. Install qBittorrent, Nomacs, Snipping Tool, VLC, OBS, Figma and Capcut
 
 #### Alpine Linux
 1. Download the [latest minimal rootfs](https://www.alpinelinux.org/downloads)
@@ -99,7 +99,7 @@ wsl.exe -d "Alpine Linux"
 
 3. Upgrade to [edge repositories](https://wiki.alpinelinux.org/wiki/Include:Upgrading_to_Edge)
 ```sh
-apk add alpine-conf openssl busybox busybox-openrc busybox-extras busybox-extras-openrc
+apk add alpine-conf openssl busybox-suid busybox-openrc busybox-extras busybox-extras-openrc
 # Amsterdam
 echo "https://eu.edge.kernel.org/alpine/edge/main" > /etc/apk/repositories
 echo "https://eu.edge.kernel.org/alpine/edge/community" >> /etc/apk/repositories
