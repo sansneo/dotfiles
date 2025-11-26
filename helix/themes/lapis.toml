@@ -3,7 +3,7 @@
 
 "ui.background" = { fg = "fg", bg = "" } # file picker border color
 "ui.text" = "fg"
-"ui.text.focus" = { fg = "", bg = "purple" } # file picker selection
+"ui.text.focus" = { fg = "", bg = "" } # file picker selection
 "ui.cursor" = { bg = "blue", fg = "bg" }
 "ui.linenr" = "grey"
 "ui.statusline" = { fg = "fg" }
@@ -28,10 +28,14 @@
 "markup.quote" = { fg = "fg" }
 
 # Syntax Highlighting for Code
-"comment" = { fg = "grey", modifiers = ["italic"] }
-"comment.line" = { fg = "grey", modifiers = ["italic"] }
-"comment.block" = { fg = "grey", modifiers = ["italic"] }
-"comment.documentation" = { fg = "blue", modifiers = ["italic"] }
+# "comment" = { fg = "grey", modifiers = ["italic"] }
+# "comment.line" = { fg = "grey", modifiers = ["italic"] }
+# "comment.block" = { fg = "grey", modifiers = ["italic"] }
+# "comment.documentation" = { fg = "blue", modifiers = ["italic"] }
+"comment" = { fg = "grey" }
+"comment.line" = { fg = "grey" }
+"comment.block" = { fg = "grey" }
+"comment.documentation" = { fg = "blue" }
 
 "keyword" = "blue"
 "keyword.storage" = "blue" # let keyword in rust 

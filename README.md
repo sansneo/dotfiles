@@ -1,5 +1,5 @@
 # dotfiles
-> I use Alpine Linux on WSL in the latest Windows LTSC
+> I use Alpine Linux on WSL with the latest Windows IoT LTSC
 
 This is what I am working on right now and it's great!  
 
@@ -8,8 +8,8 @@ This is what I am working on right now and it's great!
   so I can master all of them over time.
 * Limiting that building fatigue while working and lowering overhead is a priority and dictates  
   the selection of these tools.
-* Pragmatism, minimalism and modernity(when sensible). I will use what works to get to my goals  
-  and I won't adopt something just because it's new and shiny!
+* I will use what works to get to my goals, I won't adopt something just because it's new and shiny
+  meaning pragmatism, minimalism and mondernity (when sensible)!
 * Keeping things as default as possible to limit time wasted configuring things, but I will  
   update stuff now and then if worth it.
 * I must be able to use my most important tools over SSH without any issues.
@@ -25,17 +25,17 @@ This is what I am working on right now and it's great!
 * archiver: atool
 * request: curl and jq
 * encryption: openssl
-* editors: vi and helix
+* editor: helix
 * multiplexer: tmux and tmate
 * fuzzy finder: skim
-* langs: each takes 6 months to 2 years minimum to truly understand
-  * ash(posix shell)
+* langs:
+  * ash(shell scripting)
   * awk(text processing)
   * c(systems programming, llvm/clang toolchain with lldb and make)
   * go(cloud work)
-  * nodejs(webdev)
+  * python(object oriented, runtime)
   * scheme(functional, chez)
-  * sqlite(database)
+  * sqlite(databases)
   * typst(typesetting)
 * vcs: git
 * hacking: strace, ltrace and rizin
@@ -47,7 +47,7 @@ This is what I am working on right now and it's great!
 Use [manned.org](https://manned.org/) to access manual pages.
 
 ## Installation
-### Windows LTSC
+### Windows IoT LTSC
 1. Get the ISO, boot it up and get it done.
 
 > [!TIP]
@@ -84,7 +84,7 @@ Add-AppxPackage Microsoft.WindowsTerminal.msixbundle
 > My VSCode config is awesome and you should give it a try.
 > Get the GitHub Theme and Vim extensions from the marketplace.
 
-10. Install qBittorrent, Nomacs, Snipping Tool, VLC, OBS, Figma and Capcut
+10. Install qBittorrent, Nomacs, Snipping Tool, VLC, OBS, Figma and whatever else you need.
 
 #### Alpine Linux
 1. Download the [latest minimal rootfs](https://www.alpinelinux.org/downloads)
@@ -196,9 +196,9 @@ go install golang.org/x/tools/cmd/goimports@latest
 go install golang.org/x/vuln/cmd/govulncheck@latest
 ```
 ```sh
-# NodeJS with NPM
-doas apk add nodejs npm
-doas npm install -g typescript typescript-language-server
+# Python with Pip
+doas apk add python3 py3-pip
+doas apk add ty ruff
 ```
 ```sh
 # Scheme
@@ -250,4 +250,10 @@ doas rm -rf /usr/share/helix/runtime/themes
 ## Conclusion
 This is made by myself for myself.  
 Clone disks or use images instead of reinstalling if you can as this takes like an hour to do.  
-Remember to sync stuff with Google Drive or something self hosted like Syncthing, GoSƐ or Restic as in the future I might install this on a server rather then WSL!
+Remember to sync stuff with Google Drive or something self hosted like Syncthing or Restic as in the future!
+
+I might install this on a server rather then WSL!
+
+> [!WARNING]
+> I do not use AI for anything related to programming and will fucking refuse to.
+> Say "thank you daddy George Hotz".

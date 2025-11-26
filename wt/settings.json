@@ -2,6 +2,7 @@
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
+    "alwaysShowTabs": false,
     "compatibility.allowHeadless": true,
     "compatibility.enableUnfocusedAcrylic": false,
     "copyOnSelect": false,
@@ -19,10 +20,17 @@
         }
     ],
     "language": "en-US",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
         {
+            "bellStyle": "none",
             "colorScheme": "Dimidium",
             "cursorColor": null,
             "cursorShape": "filledBox",
@@ -36,7 +44,7 @@
             "intenseTextStyle": "all",
             "scrollbarState": "hidden"
         },
-        "list": 
+    "list": 
         [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -60,5 +68,6 @@
     },
     "schemes": [],
     "searchWebDefaultQueryUrl": "https://google.com/search?q=%22%s%22",
+    "showTabsInTitlebar": false,
     "themes": []
 }

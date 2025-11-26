@@ -5,6 +5,7 @@ www.youtube.com##ytd-search ytd-video-renderer:has(.badge[aria-label="LIVE"])
 www.youtube.com##ytd-search ytd-video-renderer:has(.badge-shape-wiz--thumbnail-live)
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([aria-label*="Streamed"], [aria-label*="Live"])
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has(span:has-text(/^Streamed|^Live/))
+m.youtube.com##[tab-identifier="FEsubscriptions"] ytm-item-section-renderer:not(:has([data-style="LIVE"])):has-text(Streamed)
 
 ! Hide YouTube Shorts
 www.youtube.com##ytd-rich-item-renderer:has([overlay-style="SHORTS"])

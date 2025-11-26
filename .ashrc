@@ -1,12 +1,16 @@
+stty -ixon
+
+# Bell
+set bell-style none
+
 # Prompt
 export PS1='\[\033[31m\]\u\[\033[0m\]@\[\033[34m\]\h \[\033[0m\]\w \[\033[0m\]\$ '
 
 # Path
 PATH="$PATH:$HOME/go/bin"
-PATH="$PATH:/mnt/c/Program Files/Mozilla Firefox"
 export PATH
 export EDITOR="hx" VISUAL="$EDITOR"
-export BROWSER="firefox.exe"
+export BROWSER="/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
 
 # Aliases
 alias ls="ls -gh --group-directories-first --color=always"
@@ -25,4 +29,5 @@ alias tencent-cli="docker run --rm -it -v $HOME/.tencent:/root/.tencent -v $PWD:
 alias terraform="docker run --rm -it -v $HOME/.terraform.d:/root/.terraform.d -v $PWD:/terraform -w /terraform hashicorp/terraform:light"
 
 # Tmux
-[ "$DISPLAY" ] && [ -z "$TMUX" ] && [ -z "$VSCODE_INJECTION" ] && exec tmux new -As home
+# [ "$DISPLAY" ] && [ -z "$TMUX" ] && [ -z "$VSCODE_INJECTION" ] && exec tmux new -As home
+alias sz='~/.config/scripts/sessionizer.sh'
