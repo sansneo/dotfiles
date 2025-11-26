@@ -255,5 +255,5 @@ Remember to sync stuff with Google Drive or something self hosted like Syncthing
 I might install this on a server rather then WSL!
 
 > [!WARNING]
-> I do not use AI for anything related to programming and will fucking refuse to.
+> I do not use AI for anything related to programming and will fucking refuse to.  
 > Say "thank you daddy George Hotz".
